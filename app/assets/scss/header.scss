@@ -1,0 +1,98 @@
+.header {
+  --nav-height: var(--cta-button-height);
+  --header-nav-button-height: var(--cta-button-height);
+  height: var(--header-height);
+  width: 100%;
+  position: sticky;
+  top: 0;
+  left: 0;
+  background-color: rgba(var(--base-bg-rgb-color), .85);
+  backdrop-filter: saturate(180%) blur(5px);
+  backface-visibility: hidden;
+  z-index: var(--max-z-index);
+  @include centerItems($jc: space-between);
+
+  &__block {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+
+  &__logo {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    &__svg {
+      max-width: 50px;
+      max-height: 50px;
+      @include centerItems();
+
+      svg,
+      img {
+        @include objectFit($fit: contain);
+      }
+    }
+
+    &__text {
+      font-size: clamp(1rem, 10vw, 1.65rem);
+      line-height: clamp(1rem, 10vw, 1.7rem);
+      display: block;
+      max-width: min-content;
+      font-family: var(--gilroy--bold);
+      color: var(--white);
+    }
+  }
+
+  &__nav {
+    position: relative;
+    display: flex;
+    gap: 1rem;
+    // font-family: var(--gilroy--light);
+    &__menu {
+      // --menu-font-size: 1.35rem;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      font-size: var(--menu-font-size);
+      // gap: calc(1rem + 1vw);
+
+      &__list {
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+        &--link {
+          position: relative;
+          display: block;
+          height: var(--nav-height);
+          line-height: var(--nav-height);
+          padding-inline: calc(var(--nav-height) / 2);
+          transition: var(--transition);
+          &:hover { 
+            color: var(--primary); 
+            box-shadow: inset 0 0 0 1px var(--primary);
+          }
+          &.active {
+            font-family: var(--gilroy--bold);
+            color: var(--primary);
+          }
+        }
+      }
+    }
+  }
+  .hamburger-menus {
+    width: var(--cta-button-height);
+    height: var(--cta-button-height);
+    cursor: pointer;
+    color: var(--base-color);
+    transition: var(--transition);
+    @include centerItems();
+    &:hover {
+      background-color: var(--primary);
+      color: var(--dark);
+    }
+  }
+}

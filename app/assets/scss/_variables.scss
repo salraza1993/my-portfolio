@@ -1,0 +1,86 @@
+
+$screen-size--xxl: 1570px;
+$screen-size--xl: 1400px;
+$screen-size--lg: 1200px;
+$screen-size--md: 992px;
+$screen-size--sm: 768px;
+$screen-size--mobile: 767px;
+$screen-size--xs: 400px;
+
+:root {
+  --base-bg-color: #232323;
+  --base-bg-rgb-color: 35, 35, 35;
+  --base-color: #d6d6d6;
+  --base-rgb-color: 186, 186, 186;
+  --border-color: #4b4b4b;
+  --border-rgb-color: 75, 75, 75;
+
+  --white: #fff;
+  --white-rgb: 255, 255, 255;
+  --dark: #232323;
+  --dark-rgb: 35, 35, 35;
+
+  --primary: #E5A624;
+  --current-color: inherit;
+
+  --scroll-bar-width: 6px;
+  --cta-button-height: 50px;
+  --wrapper-inline-gap: calc(1rem + 1vw);
+  --wrapper-width: calc(1400px + 5vw);
+  --wrapper-column-width: calc(var(--wrapper-width) / 4);
+  
+  --max-width-vw: calc(92vw - var(--scroll-bar-width));
+  --remain-vw-width: calc(100% - calc(var(--wrapper-width)));
+
+  --transparent: transparent;
+  --max-z-index: 10;
+  --common-btn-height: 42px;
+  --common-elements-gap: 0.75rem;
+  --header-height: 80px;
+  --header-bg-color: transparent;
+  --border-radius: 0.35rem;
+
+
+  --transition: all 0.35s ease-in-out;
+  --hero-banner-height: 260px;
+  --mobile-padding-x: 2vw;
+
+  --header-height: 100px;
+
+  --font-size-xxl: 66px;
+  --font-size-xl: calc(var(--font-size-xxl) - 6px);
+  --font-size-lg: calc(var(--font-size-xl) - 6px);
+  --font-size-h1: calc(var(--font-size-lg) - 6px);
+  --font-size-h2: calc(var(--font-size-h1) - 6px);
+  --font-size-h3: calc(var(--font-size-h2) - 6px);
+  --font-size-h4: calc(var(--font-size-h3) - 6px);
+  --font-size-h5: calc(var(--font-size-h4) - 6px);
+  --font-size-h6: calc(var(--bs-font-size-h5) - 6px);
+
+  --gilroy--thin: "Gilroy Thin", "Ubuntu", sans-serif;
+  --gilroy--light: "Gilroy Light", "Ubuntu", sans-serif;
+  --gilroy--ultraLight: "Gilroy UltraLight", "Ubuntu", sans-serif;
+  --gilroy--regular: "Gilroy Regular", "Ubuntu", sans-serif;
+  --gilroy: "Gilroy Regular", "Ubuntu", sans-serif;
+  --gilroy--medium: "Gilroy Medium", "Ubuntu", sans-serif;
+  --gilroy--semiBold: "Gilroy SemiBold", "Ubuntu", sans-serif;
+  --gilroy--bold: "Gilroy Bold", "Ubuntu", sans-serif;
+  --ubuntu: "Ubuntu", "Roboto", sans-serif;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --base-bg-color: #f3f3f3;
+    --base-bg-rgb-color: 243, 243, 243;
+    --base-color: #232323;
+    --base-rgb-color: 35, 35, 35;
+    --border-color: #c5c5c5;
+    --border-rgb-color: 197, 197, 197;
+
+
+    --white: #232323;
+    --white-rgb: 35, 35, 35;
+    --dark: #ffffff;
+    --dark-rgb: 255, 255, 255;
+  }
+}

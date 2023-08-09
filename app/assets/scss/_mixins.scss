@@ -1,0 +1,300 @@
+@mixin centerItems($ai: center, $jc: center, $ac: center,$display: flex) {
+  display: $display;
+  justify-content: $jc;
+  align-items: $ai;
+  align-content: $ac;
+}
+
+@mixin contentCenter($gap: 0, $display: grid, $pi: center, $pc: center) {
+  display: $display;
+  place-items: $pi;
+  place-content: $pc;
+  gap: $gap;
+}
+
+@mixin scrollBar($width: var(--scroll-bar-width), $track: transparent, $thumb: var(--primary), $pointerEvent: initial) {
+  &::-webkit-scrollbar-track {
+    background: $track;
+    pointer-events: $pointerEvent;
+    overflow: hidden;
+  }
+  &::-webkit-scrollbar {
+    width: $width;
+    height: $width;
+    background: transparent;
+    pointer-events: $pointerEvent;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: $thumb;
+    pointer-events: $pointerEvent;
+    border-radius: 10px;
+  }
+}
+
+@mixin fontAwesome($type: 900) {
+  font-family: "Font Awesome 6 Free";
+  @if $type =='400' { font-weight: 400; }
+  @else { font-weight: 900; }
+}
+
+
+@mixin multiline($lines: 2) {
+  display: -webkit-box;
+  -webkit-line-clamp: $lines;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+@mixin objectFit( $width: 100%,  $height: 100%,  $maxWidth: 100%,  $maxHeight: 100%,  $fit: cover,  $position: center) {
+  overflow: hidden;
+  img, svg {
+    max-width: $maxWidth;
+    max-height: $maxHeight;
+    width: $width !important;
+    height: $height !important;
+    object-fit: $fit;
+    object-position: $position;
+  }
+}
+
+@mixin border($direction: border, $width: 1, $style: solid, $rgb_color: --text-color-rgb, $color_opacity: 0.25){
+  #{$direction}: #{$width}px $style rgba(var(#{$rgb_color}), $color_opacity);
+}
+
+@mixin containerWidth($width, $paddingLeft: calc(var(--gutter-x) * .5), $paddingRight: calc(var(--gutter-x) * .5)) {
+  .container {
+    max-width: $width;
+    padding-right: $paddingLeft;
+    padding-left: $paddingRight;
+    --remain-vw-width: calc(calc(100vw - #{$width}) + calc(var(--gutter-x) * 1));
+  }
+}
+
+@mixin display($className) {
+  $displays: 'flex', 'inline-flex', 'grid', 'inline-grid', 'block', 'inline-block';
+  .#{$className} {
+    @each $display in $displays {
+      &--#{$display} {
+        display: #{$display};
+      }
+    }
+  } 
+}
+
+@mixin flexAlignments($className) {
+  $names: (center, start, end, between, evenly, stretch);
+  .#{$className} {
+    @if #{$className}=='align__items' or #{$className}=='sm__align__items' or #{$className}=='md__align__items' {
+      @for $i from 1 to length($names)+1 {
+        &--#{nth($names, $i)} {
+          @if nth($names, $i)=='between' {
+            align-items: space-#{nth($names, $i)} !important;
+          }
+
+          @else if nth($names, $i)=='evenly' {
+            align-items: space-#{nth($names, $i)} !important;
+          }
+
+          @else {
+            align-items: nth($names, $i) !important;
+          }
+        }
+      }
+    }
+
+    @if #{$className}=='justify__content' or #{$className}=='sm__justify__content' or #{$className}=='md__justify__content' {
+      @for $i from 1 to length($names)+1 {
+        &--#{nth($names, $i)} {
+          @if nth($names, $i)=='between' {
+            justify-content: space-#{nth($names, $i)} !important;
+          }
+
+          @else if nth($names, $i)=='evenly' {
+            justify-content: space-#{nth($names, $i)} !important;
+          }
+
+          @else {
+            justify-content: nth($names, $i);
+          }
+        }
+      }
+    }
+  }
+}
+
+@mixin generateGap($className) {
+  $gaps: (0.25rem, 0.5rem, 1rem, 1.5rem, 3rem, 3.5rem);
+  .#{$className} {
+    &--0 { gap: 0 !important }
+    &__x--0 { row-gap: 0 !important }
+    &__y--0 { column-gap: 0 !important }
+
+    @for $i from 1 to length($gaps) + 1 {
+      &--#{$i} {
+        gap: nth($gaps, $i) !important;
+      }
+  
+      &__x--#{$i} {
+        row-gap: nth($gaps, $i) !important;
+      }
+  
+      &__y--#{$i} {
+        column-gap: nth($gaps, $i) !important;
+      }
+    }
+  }
+}
+
+@mixin generateMargin($className) {
+  $sizes: (0.25rem, 0.5rem, 1rem, 1.5rem, 3rem);
+
+  .#{$className} {
+    &--0 {
+      margin: 0 !important;
+    }
+
+    &x--0 {
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+    }
+
+    &y--0 {
+      margin-top: 0 !important;
+      margin-bottom: 0 !important;
+    }
+
+    &t--0 {
+      margin-top: 0 !important;
+    }
+
+    &b--0 {
+      margin-bottom: 0 !important;
+    }
+
+    &l--0,
+    &s--0 {
+      margin-left: 0 !important;
+    }
+
+    &r--0,
+    &e--0 {
+      margin-right: 0 !important;
+    }
+
+    @for $i from 1 to length($sizes)+1 {
+
+      &--#{$i} {
+        margin: nth($sizes, $i);
+      }
+
+      &x--#{$i} {
+        margin-left: nth($sizes, $i) !important;
+        margin-right: nth($sizes, $i) !important;
+      }
+
+      &y--#{$i} {
+        margin-top: nth($sizes, $i) !important;
+        margin-bottom: nth($sizes, $i) !important;
+      }
+
+      &t--#{$i} {
+        margin-top: nth($sizes, $i) !important;
+      }
+
+      &b--#{$i} {
+        margin-bottom: nth($sizes, $i) !important;
+      }
+
+      &l--#{$i},
+      &s--#{$i} {
+        margin-left: nth($sizes, $i) !important;
+      }
+
+      &r--#{$i},
+      &e--#{$i} {
+        margin-right: nth($sizes, $i) !important;
+      }
+    }
+
+  }
+}
+
+@mixin generatePadding($className) {
+  $sizes: (0.25rem, 0.5rem, 1rem, 1.5rem, 3rem);
+  .#{$className} {
+    &--0 {
+      padding: 0 !important;
+    }
+
+    &x--0 {
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+    }
+
+    &y--0 {
+      padding-top: 0 !important;
+      padding-bottom: 0 !important;
+    }
+
+    &t--0 {
+      padding-top: 0 !important;
+    }
+
+    &b--0 {
+      padding-bottom: 0 !important;
+    }
+
+    &l--0,
+    &s--0 {
+      padding-left: 0 !important;
+    }
+
+    &r--0,
+    &e--0 {
+      padding-right: 0 !important;
+    }
+
+    @for $i from 1 to length($sizes)+1 {
+
+      &--#{$i} {
+        padding: nth($sizes, $i);
+      }
+
+      &x--#{$i} {
+        padding-left: nth($sizes, $i) !important;
+        padding-right: nth($sizes, $i) !important;
+      }
+
+      &y--#{$i} {
+        padding-top: nth($sizes, $i) !important;
+        padding-bottom: nth($sizes, $i) !important;
+      }
+
+      &t--#{$i} {
+        padding-top: nth($sizes, $i) !important;
+      }
+
+      &b--#{$i} {
+        padding-bottom: nth($sizes, $i) !important;
+      }
+
+      &l--#{$i},
+      &s--#{$i} {
+        padding-left: nth($sizes, $i) !important;
+      }
+
+      &r--#{$i},
+      &e--#{$i} {
+        padding-right: nth($sizes, $i) !important;
+      }
+    }
+  }
+}
+@mixin cardShadow($shadowColor: #000000) {
+  box-shadow: 0 2.5px 2.2px rgba($shadowColor, .02),
+    0 5.9px 5.3px rgba($shadowColor, .025),
+    0 11.1px 10px rgba($shadowColor, .03),
+    0 19.9px 17.9px rgba($shadowColor, .038),
+    0 37.2px 33.4px rgba($shadowColor, .048),
+    0 89px 80px rgba($shadowColor, .07);
+}

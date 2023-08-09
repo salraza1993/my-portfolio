@@ -1,95 +1,72 @@
-import Image from 'next/image'
-import styles from './page.module.css'
+import Link from "next/link";
+import GridColumns from "./components/GridColumns";
+import DesignerLetters from "./components/elements/DesignerLetters";
+import DeveloperLetters from "./components/elements/DeveloperLetters";
+import Pencil from "./components/elements/Pencil";
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.js</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <>
+      <section className="first-section">
+        <div className="wrapper">
+          <div className="sub-section">
+            <div className="sub-section__block">
+              <h3>
+                <span className="hand-wave-icon me--2 font-size--h2">👋</span>
+                <span className="gilroy--ultraLight">Hello there, I'm </span>
+                <span className="gilroy--bold">Salman Raza</span>
+              </h3>
+              <div className="design-dev-letters">
+                <div className="__designer">
+                  <DesignerLetters />
+                </div>
+                <div className="__pencil">
+                  <Pencil />
+                </div>
+                <div className="__developer">
+                  <DeveloperLetters />
+                </div>
+              </div>
+              <h3 className="gilroy--ultraLight">
+                based in <span className="gilroy--bold">Dubai</span>, United Arab Emirates
+              </h3>
+            </div>
+            <div className="sub-section__block">
+              <div className="first-section__image">
+                <img src="/images/first-section-illustration.png" alt="" />
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+        <GridColumns />
+      </section>
+      <Link href={"https://wa.me/+971551532975"} target="_blank" className="cta-call-button"><i className="fa-brands fa-whatsapp"></i></Link>
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+    </>
   )
 }
