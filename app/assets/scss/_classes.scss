@@ -13,6 +13,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: var(--font-size);
   line-height: var(--line-height);
   font-weight: normal;
+  margin-block-end: 1rem;
 }
 .font-size--xxl, .fs--xxl {
   --font-scaling: 5.75vw;
@@ -78,6 +79,23 @@ h1, h2, h3, h4, h5, h6 {
   @media (max-width: 640px) { --font-scaling: 3.25vw; }
 }
 
+.position {
+  $positions: relative, absolute, sticky, static, fixed, initial, inherit;
+  @each $position in $positions {
+    &--#{$position} {
+      position: $position !important;
+    }
+  }
+}
+.z-index {
+  $zIndex: 20;
+  @for $i from 1 through $zIndex {
+    &--#{$i} {
+      z-index: $i !important;
+    }
+  }
+}
+
 
 // ============ [ Gilroy fonts ] ============ //
 $gilroyFonts: ('thin', 'light', 'ultraLight', 'regular', 'medium', 'semiBold', 'bold');
@@ -89,7 +107,7 @@ $gilroyFonts: ('thin', 'light', 'ultraLight', 'regular', 'medium', 'semiBold', '
   }
 }
 .__black { color: var(--dark) !important; }
-.__white { color: var(--white) !important; }
+.__white { color: var(--light) !important; }
 .max-width {
   &-max-content, &--max-content { max-width: max-content !important;   }
   $sizes: 400, 500, 600, 700, 800, 900, 100;
@@ -125,7 +143,7 @@ $gilroyFonts: ('thin', 'light', 'ultraLight', 'regular', 'medium', 'semiBold', '
         }
       }
     }
-    &-white, &--white { color: var(--white) !important; }
+    &-white, &--light { color: var(--light) !important; }
     &-black, &--black { color: var(--black) !important; }
   }
 
@@ -249,7 +267,6 @@ $gilroyFonts: ('thin', 'light', 'ultraLight', 'regular', 'medium', 'semiBold', '
   }
 }
 
-
 @mixin lightStyles() {
   .text-primary--dark-mode-transparent { color: var(--primary) !important; }
 }
@@ -265,13 +282,13 @@ $gilroyFonts: ('thin', 'light', 'ultraLight', 'regular', 'medium', 'semiBold', '
       }
     }
   }
-  .__black, .text-black, .text--black { color: var(--white) !important; }
+  .__black, .text-black, .text--black { color: var(--light) !important; }
   .__white { color: var(--black) !important; }
   .text-primary--dark-mode-transparent { color: var(--transparent) !important; }
   .dark-mode {
     &-transparent, &--transparent { color: var(--transparent) !important; }
-    &-white, &--white { color: var(--white) !important; }
-    &-black, &--black { color: var(--black) !important; }
+    &-white, &--light { color: var(--light) !important; }
+    &-black, &--black { color: var(--dark) !important; }
     &-text-color, &--text-color { color: var(--text-color) !important; }
     &-primary, &--primary { color: var(--primary) !important; }
     &-secondary, &--secondary { color: var(--secondary) !important; }

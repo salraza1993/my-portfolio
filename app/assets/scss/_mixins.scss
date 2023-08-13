@@ -64,8 +64,8 @@
 @mixin containerWidth($width, $paddingLeft: calc(var(--gutter-x) * .5), $paddingRight: calc(var(--gutter-x) * .5)) {
   .container {
     max-width: $width;
-    padding-right: $paddingLeft;
-    padding-left: $paddingRight;
+    padding-inline-end: $paddingLeft;
+    padding-inline-start: $paddingRight;
     --remain-vw-width: calc(calc(100vw - #{$width}) + calc(var(--gutter-x) * 1));
   }
 }
@@ -154,65 +154,64 @@
     }
 
     &x--0 {
-      margin-left: 0 !important;
-      margin-right: 0 !important;
+      margin-inline-start: 0 !important;
+      margin-inline-end: 0 !important;
     }
 
     &y--0 {
-      margin-top: 0 !important;
-      margin-bottom: 0 !important;
+      margin-block-start: 0 !important;
+      margin-block-end: 0 !important;
     }
 
     &t--0 {
-      margin-top: 0 !important;
+      margin-block-start: 0 !important;
     }
 
     &b--0 {
-      margin-bottom: 0 !important;
+      margin-block-end: 0 !important;
     }
 
     &l--0,
     &s--0 {
-      margin-left: 0 !important;
+      margin-inline-start: 0 !important;
     }
 
     &r--0,
     &e--0 {
-      margin-right: 0 !important;
+      margin-inline-end: 0 !important;
     }
 
     @for $i from 1 to length($sizes)+1 {
-
       &--#{$i} {
         margin: nth($sizes, $i);
       }
 
       &x--#{$i} {
-        margin-left: nth($sizes, $i) !important;
-        margin-right: nth($sizes, $i) !important;
+        margin-inline-start: nth($sizes, $i) !important;
+        margin-inline-end: nth($sizes, $i) !important;
       }
 
       &y--#{$i} {
-        margin-top: nth($sizes, $i) !important;
-        margin-bottom: nth($sizes, $i) !important;
+        margin-block-start: nth($sizes, $i) !important;
+        margin-block-end: nth($sizes, $i) !important;
       }
 
       &t--#{$i} {
-        margin-top: nth($sizes, $i) !important;
+        margin-block-start: nth($sizes, $i) !important;
       }
 
       &b--#{$i} {
-        margin-bottom: nth($sizes, $i) !important;
+        margin-block-end: nth($sizes, $i) !important;
       }
 
       &l--#{$i},
       &s--#{$i} {
-        margin-left: nth($sizes, $i) !important;
+        margin-inline-start: nth($sizes, $i) !important;
       }
 
       &r--#{$i},
       &e--#{$i} {
-        margin-right: nth($sizes, $i) !important;
+        margin-inline-end: nth($sizes, $i) !important;
       }
     }
 
@@ -227,31 +226,31 @@
     }
 
     &x--0 {
-      padding-left: 0 !important;
-      padding-right: 0 !important;
+      padding-inline-start: 0 !important;
+      padding-inline-end: 0 !important;
     }
 
     &y--0 {
-      padding-top: 0 !important;
-      padding-bottom: 0 !important;
+      padding-block-start: 0 !important;
+      padding-block-end: 0 !important;
     }
 
     &t--0 {
-      padding-top: 0 !important;
+      padding-block-start: 0 !important;
     }
 
     &b--0 {
-      padding-bottom: 0 !important;
+      padding-block-end: 0 !important;
     }
 
     &l--0,
     &s--0 {
-      padding-left: 0 !important;
+      padding-inline-start: 0 !important;
     }
 
     &r--0,
     &e--0 {
-      padding-right: 0 !important;
+      padding-inline-end: 0 !important;
     }
 
     @for $i from 1 to length($sizes)+1 {
@@ -261,31 +260,31 @@
       }
 
       &x--#{$i} {
-        padding-left: nth($sizes, $i) !important;
-        padding-right: nth($sizes, $i) !important;
+        padding-inline-start: nth($sizes, $i) !important;
+        padding-inline-end: nth($sizes, $i) !important;
       }
 
       &y--#{$i} {
-        padding-top: nth($sizes, $i) !important;
-        padding-bottom: nth($sizes, $i) !important;
+        padding-block-start: nth($sizes, $i) !important;
+        padding-block-end: nth($sizes, $i) !important;
       }
 
       &t--#{$i} {
-        padding-top: nth($sizes, $i) !important;
+        padding-block-start: nth($sizes, $i) !important;
       }
 
       &b--#{$i} {
-        padding-bottom: nth($sizes, $i) !important;
+        padding-block-end: nth($sizes, $i) !important;
       }
 
       &l--#{$i},
       &s--#{$i} {
-        padding-left: nth($sizes, $i) !important;
+        padding-inline-start: nth($sizes, $i) !important;
       }
 
       &r--#{$i},
       &e--#{$i} {
-        padding-right: nth($sizes, $i) !important;
+        padding-inline-end: nth($sizes, $i) !important;
       }
     }
   }

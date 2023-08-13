@@ -1,6 +1,6 @@
 import localFont from 'next/font/local';
 import { Ubuntu } from 'next/font/google';
-import { Anton } from 'next/font/google';
+import { Bebas_Neue } from 'next/font/google';
 
 // =========== [ Gilroy ] =========== //
 const gilroyThin = localFont({
@@ -69,9 +69,16 @@ const roboto = Ubuntu({
   subsets: ['latin'],
   variable: '--roboto',
 })
+const bebas_Neue = Bebas_Neue({
+  weight: ['400'],
+  style: ['normal'],
+  subsets: ['latin'],
+  variable: '--g-bebas-neue',
+})
 
 export {
   roboto,
+  bebas_Neue,
   gilroy,
   gilroyThin,
   gilroyUltraLight,

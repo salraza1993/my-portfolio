@@ -1,8 +1,8 @@
 import Link from 'next/link';
 import SR_logo from './elements/SR_logo';
-import ArrowRight from './elements/ArrowRight';
 import HamburgerIcon from './elements/HamburgerIcon';
 import GridColumns from './GridColumns';
+import CustomButton from './elements/CustomButton';
 
 export default function Header() {
   const menus = [
@@ -23,7 +23,7 @@ export default function Header() {
       <div className="header__block">
         <nav className="header__nav">
           <div className='display--flex align_items--center gap--2'>
-            <ul className="header__nav__menu">
+            <ul className="h  eader__nav__menu">
               {
                 menus.map((menu, index) => {
                   return <li className='header__nav__menu__list'>
@@ -40,10 +40,7 @@ export default function Header() {
               <HamburgerIcon />
             </div>
           </div>
-          <Link href={'/contact'} className='cta-button'>
-            Contact Me
-            <span className='cta-button__icon'><ArrowRight /></span>
-          </Link>
+          <CustomButton text='Contact Me' path="/contact" />
         </nav>
       </div>
     </div>

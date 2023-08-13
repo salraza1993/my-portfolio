@@ -1,5 +1,6 @@
 import {
   roboto,
+  bebas_Neue,
   gilroy,
   gilroyThin,
   gilroyUltraLight,
@@ -19,6 +20,7 @@ import {
 import './assets/scss/style.scss'
 import 'fontawesome-free-v6/css/all.css'
 import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 export const metadata = {
   title: 'Salman Raza | UX/UI Designer & Developer',
@@ -32,6 +34,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={`
           ${roboto.variable}
+          ${bebas_Neue.variable}
           ${bebasNeueThin.variable}
           ${bebasNeueLight.variable}
           ${bebasNeue.variable}
@@ -47,8 +50,10 @@ export default function RootLayout({ children }) {
           ${gilroySemiBold.variable}
           ${gilroyBold.variable}
         `}>
+        {/* <FlareCursor /> */}
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   )

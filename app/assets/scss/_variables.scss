@@ -1,32 +1,72 @@
 
 $screen-size--xxl: 1570px;
-$screen-size--xl: 1400px;
+$screen-size--xl: 1441px;
 $screen-size--lg: 1200px;
 $screen-size--md: 992px;
 $screen-size--sm: 768px;
 $screen-size--mobile: 767px;
 $screen-size--xs: 400px;
 
-:root {
+@mixin darkModeColors() {
+  --bg-start-rgb: 35, 35, 35;
+  --bg-end-rgb: 35, 35, 35;
   --base-bg-color: #232323;
   --base-bg-rgb-color: 35, 35, 35;
   --base-color: #d6d6d6;
   --base-rgb-color: 186, 186, 186;
   --border-color: #4b4b4b;
   --border-rgb-color: 75, 75, 75;
-
-  --white: #fff;
-  --white-rgb: 255, 255, 255;
+  --light: #fff;
+  --light-rgb: 255, 255, 255;
   --dark: #232323;
   --dark-rgb: 35, 35, 35;
 
-  --primary: #E5A624;
-  --current-color: inherit;
+  --home-about-sec-bg-color: #000000;
+  --home-about-sec-color: #d6d6d6;
+  --home-about-sec-border-color: #353535;
+}
+@mixin lightModeColors() {
+  --bg-start-rgb: 214, 219, 220;
+  --bg-end-rgb: 255, 255, 255;
+  --base-bg-color: #f1f1f1;
+  --base-bg-rgb-color: 243, 243, 243;
+  --base-color: #232323;
+  --base-rgb-color: 35, 35, 35;
+  --border-color: #c5c5c5;
+  --border-rgb-color: 197, 197, 197;
+  --light: #232323;
+  --light-rgb: 35, 35, 35;
+  --dark: #ffffff;
+  --dark-rgb: 255, 255, 255;
+  --home-about-sec-bg-color: #353535;
+  --home-about-sec-color: #d6d6d6;
+  --home-about-sec-border-color: #545454;
+}
 
-  --scroll-bar-width: 6px;
+:root {
+  @include lightModeColors();
+  --cursor-color: #d6d6d6;
+  --white: #fff;
+  --white-rgb: 255, 255, 255;
+  --black: #232323;
+  --black-rgb: 35, 35, 35;
+  --full-black: #000000;
+  --full-black-rgb: 0, 0, 0;
+  
+  --primary: #E5A624;
+  --primary-rgb: 229, 166, 36;
+  --footer-bg: #E5EEF1;
+  --current-color: inherit;
+  --secondary-glow: radial-gradient(rgba(1, 103, 255, 0.35), rgba(1, 103, 255, 0));
+  --primary-glow: linear-gradient(to bottom right, rgba(var(--primary-rgb), 0), rgba(var(--primary-rgb), 0), rgba(var(--primary-rgb), .3));
+  
+  --initial-font-size: 1.2rem;
+  --initial-line-height: 1.75rem;
+  
+  --scroll-bar-width: 3px;
   --cta-button-height: 50px;
   --wrapper-inline-gap: calc(1rem + 1vw);
-  --wrapper-width: calc(1400px + 5vw);
+  --wrapper-width: calc(1400px + 10vw);
   --wrapper-column-width: calc(var(--wrapper-width) / 4);
   
   --max-width-vw: calc(92vw - var(--scroll-bar-width));
@@ -67,20 +107,21 @@ $screen-size--xs: 400px;
   --gilroy--bold: "Gilroy Bold", "Ubuntu", sans-serif;
   --ubuntu: "Ubuntu", "Roboto", sans-serif;
 }
+@media (width < $screen-size--xl) {
+  :root {
+    --wrapper-width: calc(1200px + 0vw);
+  }
+}
 
+
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    @include darkModeColors();
+  }
+}
 @media (prefers-color-scheme: light) {
   :root {
-    --base-bg-color: #f3f3f3;
-    --base-bg-rgb-color: 243, 243, 243;
-    --base-color: #232323;
-    --base-rgb-color: 35, 35, 35;
-    --border-color: #c5c5c5;
-    --border-rgb-color: 197, 197, 197;
-
-
-    --white: #232323;
-    --white-rgb: 35, 35, 35;
-    --dark: #ffffff;
-    --dark-rgb: 255, 255, 255;
+    @include lightModeColors();
   }
 }

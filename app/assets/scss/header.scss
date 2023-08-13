@@ -7,7 +7,7 @@
   top: 0;
   left: 0;
   background-color: rgba(var(--base-bg-rgb-color), .85);
-  backdrop-filter: saturate(180%) blur(5px);
+  backdrop-filter: blur(25px) brightness(100%);
   backface-visibility: hidden;
   z-index: var(--max-z-index);
   @include centerItems($jc: space-between);
@@ -41,7 +41,7 @@
       display: block;
       max-width: min-content;
       font-family: var(--gilroy--bold);
-      color: var(--white);
+      color: var(--light);
     }
   }
 
