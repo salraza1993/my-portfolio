@@ -5,9 +5,17 @@ import DeveloperLetters from "./components/elements/DeveloperLetters";
 import Pencil from "./components/elements/Pencil";
 import CustomButton from "./components/elements/CustomButton";
 import HomeAboutSRLogo from "./components/elements/HomeAboutSRLogo";
+import SectionHeading from "./components/SectionHeading";
+import ProjectSlider from "./components/ProjectSlider";
+import TestimonialCard from "./components/TestimonialCard";
 
 export default function Home() {
   const currentCompany = 'NSAS Tourism L.L.C';
+  const galleryTabs = [
+    { label: 'Websites', iconName: 'icon-website', path: '/'},
+    { label: 'Applications', iconName: 'icon-application', path: '/'},
+    { label: 'Graphics', iconName: 'icon-graphic', path: '/'},
+  ]
   return (
     <>
       <section className="first-section">
@@ -47,20 +55,41 @@ export default function Home() {
       <section className="home-projects-sec">
         <div className="wrapper">
           <div className="home-projects-sec__container">
-            <div className="sec-heading-block">
-              <div className="sec-heading-block__top-strip">
-                <h5 className="block-top-strip-heading gilroy--bold">Work</h5>
-                <CustomButton />
+            <SectionHeading
+              smallHeading={'work'}
+              buttonPath="#"
+              bigOutlineHeading={'Case Studies &'}
+              bigHeading={'Projects'}
+              iconImage={'images/hand_puzzel.png'}
+              iconImageAlt={'Puzzle Hand'}
+            />
+            <div className="category-tabs-container">
+              <div className="category-tabs-container__illustration">
+                <img src="/images/man-on-bean-bag.png" alt="Man on Bean Bag" />
               </div>
-              <h2 className="sec-heading-block__heading fs--x-large">
-                Case Studies & <br /> Projects
-              </h2>
+              <div className="category-tabs-container__content">
+                <h4 className="mb--4 pb--3 gilroy--light">Have a sneak-peek into <strong>my body of work</strong> thus far...</h4>
+                <ul className="category-tabs">
+                  {
+                    galleryTabs.map((tab, index) => <li key={index} className="category-tabs__tab">
+                      <Link className="category-tabs__tab--link" href={tab.path}>
+                        <span className="__icon">
+                          <img src={`/images/${tab.iconName}.png`} alt="" />
+                        </span>
+                        {tab.label}
+                      </Link>
+                    </li>)
+                  }
+                </ul>
+              </div>
             </div>
           </div>
         </div>
+        <div className="home-project-slider-container">
+          <ProjectSlider />
+        </div>
         <GridColumns />
       </section>
-      
       <section className="home-about-sec">
         <div className="wrapper">
           <div className="home-about-sec__container">
@@ -90,33 +119,26 @@ export default function Home() {
         </div>
         <GridColumns />
       </section>
-
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
+      <section className="home-testimonial-sec">
+        <div className="wrapper">
+          <div className="home-testimonial-sec__container">
+            <SectionHeading
+              smallHeading={'testimonials'}
+              buttonPath="#"
+              bigOutlineHeading={"People's views"}
+              bigHeading={'About Me!'}
+              iconImage={'images/hand-clapping.png'}
+              iconImageAlt={'Puzzle Hand'}
+            />
+            <div className="testimonial-cards">
+              <TestimonialCard />
+              <TestimonialCard />
+              <TestimonialCard />
+            </div>
+          </div>
+        </div>
+        <GridColumns />
+      </section>
     </>
   )
 }

@@ -1,6 +1,6 @@
 import {
-  roboto,
-  bebas_Neue,
+  ubuntu,
+  bebasNeue,
   gilroy,
   gilroyThin,
   gilroyUltraLight,
@@ -9,12 +9,6 @@ import {
   gilroyMedium,
   gilroySemiBold,
   gilroyBold,
-  bebasNeueThin,
-  bebasNeueLight,
-  bebasNeue,
-  bebasNeueBook,
-  bebasNeueRegular,
-  bebasNeueBold,
 } from "./../public/Fonts";
 
 import './assets/scss/style.scss'
@@ -33,14 +27,8 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`
-          ${roboto.variable}
-          ${bebas_Neue.variable}
-          ${bebasNeueThin.variable}
-          ${bebasNeueLight.variable}
+          ${ubuntu.variable}
           ${bebasNeue.variable}
-          ${bebasNeueBook.variable}
-          ${bebasNeueRegular.variable}
-          ${bebasNeueBold.variable}
           ${gilroy.variable}
           ${gilroyThin.variable}
           ${gilroyUltraLight.variable}

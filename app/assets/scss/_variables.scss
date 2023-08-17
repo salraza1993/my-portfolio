@@ -21,9 +21,14 @@ $screen-size--xs: 400px;
   --dark: #232323;
   --dark-rgb: 35, 35, 35;
 
-  --home-about-sec-bg-color: #000000;
+  --home-about-sec-bg-color: #3A3A3A;
   --home-about-sec-color: #d6d6d6;
-  --home-about-sec-border-color: #353535;
+  --home-about-sec-border-color: #545454;
+  // --home-about-profile-image: 
+  --horizontal-scrollbar-bg: #1A1A1A;
+  --grid-line-color: rgba(var(--border-rgb-color), 0.4);
+  
+
 }
 @mixin lightModeColors() {
   --bg-start-rgb: 214, 219, 220;
@@ -41,6 +46,8 @@ $screen-size--xs: 400px;
   --home-about-sec-bg-color: #353535;
   --home-about-sec-color: #d6d6d6;
   --home-about-sec-border-color: #545454;
+  --horizontal-scrollbar-bg: #dbdbdb;
+  --grid-line-color: rgba(var(--border-rgb-color), 0.35);
 }
 
 :root {
@@ -59,6 +66,9 @@ $screen-size--xs: 400px;
   --current-color: inherit;
   --secondary-glow: radial-gradient(rgba(1, 103, 255, 0.35), rgba(1, 103, 255, 0));
   --primary-glow: linear-gradient(to bottom right, rgba(var(--primary-rgb), 0), rgba(var(--primary-rgb), 0), rgba(var(--primary-rgb), .3));
+  --swiper-theme-color: var(--primary) !important;
+  --swiper-pagination-bullet-size: 10px !important;
+  --swiper-pagination-bullet-inactive-color: var(--base-color) !important;
   
   --initial-font-size: 1.2rem;
   --initial-line-height: 1.75rem;

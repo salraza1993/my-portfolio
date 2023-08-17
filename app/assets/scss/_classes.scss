@@ -106,6 +106,17 @@ $gilroyFonts: ('thin', 'light', 'ultraLight', 'regular', 'medium', 'semiBold', '
     strong { font-family: var(--gilroy--bold) !important; }
   }
 }
+
+$ubuntuFonts: ('thin', 'light', 'regular', 'medium', 'semiBold', 'bold', 'black');
+$ubuntuWeight: (100, 300, 400, 500, 600, 700, 900);
+.ubuntu {
+  @for $i from 1 through length($ubuntuFonts) {
+    &--#{nth($ubuntuFonts, $i)} {
+      font-family: var(--ubuntu) !important;
+      font-weight: nth($ubuntuWeight, $i) !important;
+    }
+  }
+}
 .__black { color: var(--dark) !important; }
 .__white { color: var(--light) !important; }
 .max-width {

@@ -36,49 +36,22 @@ const gilroyBold = localFont({
   variable: '--gilroy--bold',
 });
 
-const bebasNeueThin = localFont({
-  src: './fonts/bebas/bebasneue_thin.woff2',
-  variable: '--bebasneue--thin',
-});
-const bebasNeueLight = localFont({
-  src: './fonts/bebas/bebasneue_light.woff2',
-  variable: '--bebasneue--light',
-});
-const bebasNeue = localFont({
-  src: './fonts/bebas/bebasneue.woff2',
-  variable: '--bebasneue',
-});
-const bebasNeueBook = localFont({
-  src: './fonts/bebas/bebasneue_book.woff2',
-  variable: '--bebasneue--book',
-});
-const bebasNeueRegular = localFont({
-  src: './fonts/bebas/bebasneue_regular.woff2',
-  variable: '--bebasneue--regular',
-});
-const bebasNeueBold = localFont({
-  src: './fonts/bebas/bebasneue_bold.woff2',
-  variable: '--bebasneue--bold',
-
-});
-
-
-const roboto = Ubuntu({
+const ubuntu = Ubuntu({
   weight: ['300', '400', '500', '700'],
   style: ['normal', 'italic'],
   subsets: ['latin'],
-  variable: '--roboto',
+  variable: '--ubuntu',
 })
-const bebas_Neue = Bebas_Neue({
+const bebasNeue = Bebas_Neue({
   weight: ['400'],
   style: ['normal'],
   subsets: ['latin'],
-  variable: '--g-bebas-neue',
+  variable: '--bebas-neue',
 })
 
 export {
-  roboto,
-  bebas_Neue,
+  ubuntu,
+  bebasNeue,
   gilroy,
   gilroyThin,
   gilroyUltraLight,
@@ -87,11 +60,4 @@ export {
   gilroyMedium,
   gilroySemiBold,
   gilroyBold,
-  
-  bebasNeueThin,
-  bebasNeueLight,
-  bebasNeue,
-  bebasNeueRegular,
-  bebasNeueBold,
-  bebasNeueBook
 };
