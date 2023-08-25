@@ -11,7 +11,7 @@ export default function Header() {
     { label: 'Works', path: './portfolio', activeState: false },
   ];
   return <header className='header'>
-    <div className="wrapper display--flex justify__content--between">
+    <div className="wrapper display--flex justify-content--between">
       <div className="header__block">
         <Link href={'./'} className="header__logo">
           <span className="header__logo__svg">

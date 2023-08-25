@@ -15,6 +15,7 @@ import './assets/scss/style.scss'
 import 'fontawesome-free-v6/css/all.css'
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import PrimaryLoader from "./components/PrimaryLoader";
 
 export const metadata = {
   title: 'Salman Raza | UX/UI Designer & Developer',
@@ -39,6 +40,7 @@ export default function RootLayout({ children }) {
           ${gilroyBold.variable}
         `}>
         {/* <FlareCursor /> */}
+        <PrimaryLoader />
         <Header />
         {children}
         <Footer />

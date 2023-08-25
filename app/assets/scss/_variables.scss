@@ -1,12 +1,13 @@
 
-$screen-size--xxl: 1570px;
-$screen-size--xl: 1441px;
+$screen-size--xxl: 1600px;
+$screen-size--xl: 1400px;
 $screen-size--lg: 1200px;
 $screen-size--md: 992px;
 $screen-size--sm: 768px;
 $screen-size--mobile: 767px;
 $screen-size--xs: 400px;
 
+// ========== [ Dark Mode colors ] ========== //
 @mixin darkModeColors() {
   --bg-start-rgb: 35, 35, 35;
   --bg-end-rgb: 35, 35, 35;
@@ -30,6 +31,7 @@ $screen-size--xs: 400px;
   
 
 }
+// ========== [ Light Mode colors ] ========== //
 @mixin lightModeColors() {
   --bg-start-rgb: 214, 219, 220;
   --bg-end-rgb: 255, 255, 255;
@@ -73,10 +75,10 @@ $screen-size--xs: 400px;
   --initial-font-size: 1.2rem;
   --initial-line-height: 1.75rem;
   
-  --scroll-bar-width: 3px;
+  --scroll-bar-width: 5px;
   --cta-button-height: 50px;
-  --wrapper-inline-gap: calc(1rem + 1vw);
-  --wrapper-width: calc(1400px + 10vw);
+
+  --wrapper-width: 1300px;
   --wrapper-column-width: calc(var(--wrapper-width) / 4);
   
   --max-width-vw: calc(92vw - var(--scroll-bar-width));
@@ -117,21 +119,27 @@ $screen-size--xs: 400px;
   --gilroy--bold: "Gilroy Bold", "Ubuntu", sans-serif;
   --ubuntu: "Ubuntu", "Roboto", sans-serif;
 }
-@media (width < $screen-size--xl) {
-  :root {
-    --wrapper-width: calc(1200px + 0vw);
-  }
-}
-
-
-
 @media (prefers-color-scheme: dark) {
-  :root {
-    @include darkModeColors();
-  }
+  :root { @include darkModeColors(); }
 }
 @media (prefers-color-scheme: light) {
-  :root {
-    @include lightModeColors();
-  }
+  :root { @include lightModeColors();}
+}
+
+
+@media (width > $screen-size--xxl) {
+  @include wrapperResponsiveWidth(calc(1400px + 10vw));
+}
+
+@media (width > $screen-size--xl) and (width < $screen-size--xxl) {
+  @include wrapperResponsiveWidth();
+}
+@media (width < $screen-size--xl) {
+  @include wrapperResponsiveWidth(1170px);
+}
+@media (width < $screen-size--lg) {
+  @include wrapperResponsiveWidth(950px);
+}
+@media (width < $screen-size--md) {
+  @include wrapperResponsiveWidth(90vw);
 }

@@ -210,14 +210,17 @@ $ubuntuWeight: (100, 300, 400, 500, 600, 700, 900);
   &--none { line-height: none !important;}
   &--normal { line-height: normal !important;}
 }
-
+.flex {
+  &--wrap { flex-wrap: wrap !important; }
+  &--nowrap { flex-wrap: nowrap !important; }
+}
 @include display(display);
 
 // flex align items 
-@include flexAlignments(align__items);
+@include flexAlignments(align-items);
 
 // flex justify content
-@include flexAlignments(justify__content);
+@include flexAlignments(justify-content);
 
 // ------------[ margins ]------------ //
 @include generateMargin(m);
@@ -261,7 +264,7 @@ $ubuntuWeight: (100, 300, 400, 500, 600, 700, 900);
     display: flex !important;
   }
 }
-@media (width <=$screen-size--sm) {
+@media (width <= $screen-size--sm) {
   .hidden--sm {
     display: none !important;
   }
@@ -269,7 +272,7 @@ $ubuntuWeight: (100, 300, 400, 500, 600, 700, 900);
     display: flex !important;
   }
 }
-@media (width <=$screen-size--xs) {
+@media (width <= $screen-size--xs) {
   .hidden--xs {
     display: none !important;
   }

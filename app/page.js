@@ -8,14 +8,21 @@ import HomeAboutSRLogo from "./components/elements/HomeAboutSRLogo";
 import SectionHeading from "./components/SectionHeading";
 import ProjectSlider from "./components/ProjectSlider";
 import TestimonialCard from "./components/TestimonialCard";
+import ArrowRight from "./components/elements/ArrowRight";
 
 export default function Home() {
-  const currentCompany = 'NSAS Tourism L.L.C';
   const galleryTabs = [
-    { label: 'Websites', iconName: 'icon-website', path: '/'},
-    { label: 'Applications', iconName: 'icon-application', path: '/'},
-    { label: 'Graphics', iconName: 'icon-graphic', path: '/'},
-  ]
+    { label: 'Websites', iconName: 'icon-website', path: '/' },
+    { label: 'Applications', iconName: 'icon-application', path: '/' },
+    { label: 'Graphics', iconName: 'icon-graphic', path: '/' },
+  ];
+
+  const testimonialCards = [
+    { id: 'one', comment: 'Lorem ipsum dolor sit amet consectetur adipisicing suscipit magnam veritatis dignissimos minima.', image: '/images/author-image.jpg', name: 'Hasan Tariq', designation: 'General Manager', company: 'NSAS Toursim LLC' },
+    { id: 'two', comment: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius animi suscipit magnam veritatis dignissimos minima.', image: '/images/author-image.jpg', name: 'Hasan Tariq', designation: 'General Manager', company: 'NSAS Toursim LLC' },
+    { id: 'three', comment: 'Lorem ipsum dolor elit. Eius animi suscipit magnam veritatis dignissimos minima.', image: '/images/author-image.jpg', name: 'Hasan Tariq', designation: 'General Manager', company: 'NSAS Toursim LLC' }
+  ];
+
   return (
     <>
       <section className="first-section">
@@ -23,13 +30,14 @@ export default function Home() {
         <div className="wrapper">
           <div className="sub-section">
             <div className="sub-section__block">
-              <h3 className="m--0">
-                <span className="hand-wave-icon me--2 font-size--h2">👋</span>
+              <h3 className="m--0 display--flex align-items--center flex--wrap gap--2">
+                {/* <span className="hand-wave-icon me--2 font-size--h2">👋</span> */}
+                <span className="me--2"><img src="/images/hello.png" alt=""  /></span>
                 <span className="gilroy--ultraLight">Hello there, I'm </span>
                 <span className="gilroy--bold">Salman Raza</span>
               </h3>
               <div className="design-dev-letters">
-                <DesignerLetters />                
+                <DesignerLetters />
                 <div className="__pencil">
                   <Pencil />
                 </div>
@@ -39,7 +47,7 @@ export default function Home() {
                 </Link>
               </div>
               <h3 className="gilroy--ultraLight">
-                based in <span className="gilroy--bold">Dubai</span>, United Arab Emirates
+                currently based in <span className="gilroy--bold">Dubai</span>, United Arab Emirates
               </h3>
               <span className="scroll-to-bottom">Scroll to know more</span>
             </div>
@@ -73,6 +81,7 @@ export default function Home() {
                   {
                     galleryTabs.map((tab, index) => <li key={index} className="category-tabs__tab">
                       <Link className="category-tabs__tab--link" href={tab.path}>
+                        <span className="arrow-icon"><ArrowRight /></span>
                         <span className="__icon">
                           <img src={`/images/${tab.iconName}.png`} alt="" />
                         </span>
@@ -95,11 +104,14 @@ export default function Home() {
           <div className="home-about-sec__container">
             <span className="container-special-block"></span>
             <div className="sec-content">
-              <div className="sec-content__logo">
+              <div className="sec-content__logo hidden--xl">
                 <HomeAboutSRLogo />
               </div>
               <div className="sec-content__text">
-                <p className="mb--2">Myself</p>
+                <h5 className="mb--2 display--flex align-items--center gap--2">
+                  <span className=""><img src="/images/myself.gif" alt="" width="60" /></span>
+                  <span>Myself</span>
+                </h5>
                 <h2 className="gilroy--bold fs--h2 __name">Salman Raza</h2>
                 <div className="mb--4 pb--1">
                   <p>
@@ -113,7 +125,7 @@ export default function Home() {
               </div>
             </div>
             <div className="sec-profile">
-              <img src="/images/profile-image.png" alt="" />
+              <img src="/images/profile-image.png" alt="" className="display--block" />
             </div>
           </div>
         </div>
@@ -131,14 +143,14 @@ export default function Home() {
               iconImageAlt={'Puzzle Hand'}
             />
             <div className="testimonial-cards">
-              <TestimonialCard />
-              <TestimonialCard />
-              <TestimonialCard />
+              {testimonialCards.map((card, index) => {
+                return <TestimonialCard key={index} data={card} />;
+              })}
             </div>
           </div>
         </div>
         <GridColumns />
       </section>
     </>
-  )
+  );
 }

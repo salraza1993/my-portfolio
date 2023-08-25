@@ -37,6 +37,11 @@
   @else { font-weight: 900; }
 }
 
+@mixin wrapperResponsiveWidth($width: 1300px) {
+  :root {
+    --wrapper-width: #{$width};
+  }
+}
 
 @mixin multiline($lines: 2) {
   display: -webkit-box;
@@ -54,6 +59,7 @@
     height: $height !important;
     object-fit: $fit;
     object-position: $position;
+    border-radius: inherit;
   }
 }
 
@@ -95,17 +101,15 @@
 @mixin flexAlignments($className) {
   $names: (center, start, end, between, evenly, stretch);
   .#{$className} {
-    @if #{$className}=='align__items' or #{$className}=='sm__align__items' or #{$className}=='md__align__items' {
+    @if #{$className}=='align-items' or #{$className}=='sm__align-items' or #{$className}=='md__align-items' {
       @for $i from 1 to length($names)+1 {
         &--#{nth($names, $i)} {
           @if nth($names, $i)=='between' {
             align-items: space-#{nth($names, $i)} !important;
           }
-
           @else if nth($names, $i)=='evenly' {
             align-items: space-#{nth($names, $i)} !important;
           }
-
           @else {
             align-items: nth($names, $i) !important;
           }
@@ -113,17 +117,15 @@
       }
     }
 
-    @if #{$className}=='justify__content' or #{$className}=='sm__justify__content' or #{$className}=='md__justify__content' {
+    @if #{$className}=='justify-content' or #{$className}=='sm__justify-content' or #{$className}=='md__justify-content' {
       @for $i from 1 to length($names)+1 {
         &--#{nth($names, $i)} {
           @if nth($names, $i)=='between' {
             justify-content: space-#{nth($names, $i)} !important;
           }
-
           @else if nth($names, $i)=='evenly' {
             justify-content: space-#{nth($names, $i)} !important;
           }
-
           @else {
             justify-content: nth($names, $i);
           }
