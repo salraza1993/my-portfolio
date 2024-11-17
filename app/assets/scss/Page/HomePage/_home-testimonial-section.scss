@@ -1,0 +1,49 @@
+.testimonial-cards {
+  --elem-gaps: calc(1rem + 1vw);
+  --quote-icon-size: 50px;
+  --author-icon-size: 70px;
+  --card-padding: calc(1rem + 1vw);
+  position: relative;
+  display: flex;
+  gap: var(--elem-gaps);
+  padding-block-start: calc(1rem + 1.5vw);
+
+  &__card {
+    background-color: var(--light);
+    color: var(--dark);
+    padding: var(--card-padding);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+
+    .quote-icon {
+      width: var(--quote-icon-size);
+      height: var(--quote-icon-size);
+      @include objectFit($fit: contain, $overFlow: visible);
+
+      img {
+        filter: drop-shadow(5px 5px 5px rgba(var(--full-black-rgb), 0.15));
+      }
+    }
+
+    .author-profile {
+      position: relative;
+      justify-self: flex-end;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+
+      &__image {
+        flex-shrink: 0;
+        position: relative;
+        width: var(--author-icon-size);
+        height: var(--author-icon-size);
+        background-color: var(--dark);
+        border-radius: var(--author-icon-size);
+        box-shadow: 0 0 0 1px var(--grid-line-color);
+        @include objectFit();
+      }
+    }
+  }
+}

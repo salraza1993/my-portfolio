@@ -1,4 +1,3 @@
-import React from 'react'
 
 export default function GridColumns() {
   return <div className="grid-columns">

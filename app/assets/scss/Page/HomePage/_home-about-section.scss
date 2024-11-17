@@ -1,0 +1,120 @@
+.home-about-sec {
+  --sec-element-minus-margin: 150px;
+  --sec-element-paddings: calc(1.5rem + 2vw);;
+  --sec-bg-color: var(--home-about-sec-bg-color);
+  position: relative;
+  padding-block-end: calc(2rem + 2vw + var(--sec-element-minus-margin));
+
+  &__container {
+    position: relative;
+    width: 100%;
+    background-color: var(--sec-bg-color);
+    display: flex;
+    isolation: isolate;
+
+    .cta-button {
+      --shadow-color: var(--home-about-sec-border-color);
+    }
+
+    .container-special-block {
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+
+      &::after {
+        content: '';
+        aspect-ratio: 1 / 1;
+        height: calc(100% + 4.5vw);
+        scale: 1.4;
+        border-radius: 100% 0 0 100%;
+        position: absolute;
+        inset-inline-end: 0;
+        box-shadow: 
+          0 0 0 10px rgba(var(--base-color-rgb), 0.04), 
+          0 0 0 20px rgba(var(--base-color-rgb), 0.03), 
+          0 0 0 30px rgba(var(--base-color-rgb), 0.02);
+        background-color: rgba(var(--base-color-rgb), 0.1);
+        z-index: -1;
+      }
+    }
+
+    .sec-content {
+      position: relative;
+      width: 100%;
+      max-width: calc(var(--wrapper-column-width) * 2);
+      display: flex;
+      padding-block: var(--sec-element-paddings);
+      text-wrap: balance;
+
+      .__name {
+        color: var(--primary);
+        max-width: fit-content;
+      }
+
+      &__logo {
+        flex-shrink: 0;
+        position: relative;
+        width: 100%;
+        max-width: var(--wrapper-column-width);
+        @include centerItems();
+        flex-direction: column;
+      }
+
+      &__text {
+        @media (width < $screen-size--xl) {
+          padding-inline: var(--sec-element-paddings);
+        }
+      }
+    }
+
+    .sec-profile {
+      position: relative;
+      margin-block-end: calc(0px - var(--sec-element-minus-margin));
+      width: 100%;
+      max-width: calc(var(--wrapper-column-width) * 2);
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      padding: 2vw 2vw 0 2vw;
+      isolation: isolate;
+      &::before {
+        content: '';
+        position: absolute;
+        inset-block-end: 0;
+        width: 85%;
+        height: 2px;
+        inset-inline-start: 10%;
+        background-color: var(--base-color);
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background-image: url('/images/profile-bg-icons.svg');
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position: center top;
+        z-index: -1;
+      }
+
+      @media (width < $screen-size--xl) {
+        img {
+          width: 100%;
+        }
+      }
+
+    }
+
+    @media (width < $screen-size--xl) {
+      --sec-element-minus-margin: 80px;
+    }
+
+    @media (width < $screen-size--xl) {
+      flex-direction: column;
+    }
+  }
+}

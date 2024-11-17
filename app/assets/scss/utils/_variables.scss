@@ -1,0 +1,16 @@
+@media (width > $screen-size--xxl) {
+  @include wrapperResponsiveWidth(calc(1300px + 10vw));
+}
+
+@media (width > $screen-size--xl) and (width < $screen-size--xxl) {
+  @include wrapperResponsiveWidth();
+}
+@media (width < $screen-size--xl) {
+  @include wrapperResponsiveWidth(1170px);
+}
+@media (width < $screen-size--lg) {
+  @include wrapperResponsiveWidth(950px);
+}
+@media (width < $screen-size--md) {
+  @include wrapperResponsiveWidth(90vw);
+}

@@ -75,7 +75,7 @@
     --remain-vw-width: calc(calc(100vw - #{$width}) + calc(var(--gutter-x) * 1));
   }
 }
-@mixin outlineTextShadow($color: rgba(var(--base-rgb-color), 0.5), $borderWidth: 1px) {
+@mixin outlineTextShadow($color: rgba(var(--base-color-rgb), 0.5), $borderWidth: 1px) {
   text-shadow: 
   -#{$borderWidth} -#{$borderWidth} 0 $color, 
   0 -#{$borderWidth} 0 $color, 

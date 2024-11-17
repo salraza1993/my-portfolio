@@ -1,0 +1,24 @@
+:root {
+  --swiper-theme-color: var(--primary) !important;
+  --swiper-pagination-bullet-size: 10px !important;
+  --swiper-pagination-bullet-inactive-color: var(--base-color) !important;
+  --initial-font-size: 1rem;
+  --initial-line-height: 1.75rem;
+  --scroll-bar-width: 5px;
+  --cta-button-height: 50px;
+  --wrapper-width: 1300px;
+  --wrapper-column-width: calc(var(--wrapper-width) / 4);
+  --max-width-vw: calc(92vw - var(--scroll-bar-width));
+  --remain-vw-width: calc(100% - calc(var(--wrapper-width)));
+  --transparent: transparent;
+  --max-z-index: 10;
+  --common-btn-height: 42px;
+  --common-elements-gap: 0.75rem;
+  --header-height: 100px;
+  --header-bg-color: transparent;
+  --border-radius: 0.35rem;
+  --transition: all 0.35s ease-in-out;
+  --hero-banner-height: 260px;
+  --mobile-padding-x: 2vw;
+  --bottom-sheet-height: 70px;
+}

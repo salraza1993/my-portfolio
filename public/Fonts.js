@@ -1,5 +1,5 @@
 import localFont from 'next/font/local';
-import { Ubuntu } from 'next/font/google';
+import { Inter, Ubuntu, Courier_Prime, Inter } from 'next/font/google';
 import { Bebas_Neue } from 'next/font/google';
 
 // =========== [ Gilroy ] =========== //
@@ -36,11 +36,23 @@ const gilroyBold = localFont({
   variable: '--gilroy--bold',
 });
 
+const courierPrime = Courier_Prime({
+  weight: ['400', '700'],
+  style: ['normal', 'italic'],
+  subsets: ['latin'],
+  variable: '--courier-prime',
+})
 const ubuntu = Ubuntu({
   weight: ['300', '400', '500', '700'],
   style: ['normal', 'italic'],
   subsets: ['latin'],
   variable: '--ubuntu',
+})
+const inter = Inter({
+  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
+  style: ['normal', 'italic'],
+  subsets: ['latin'],
+  variable: '--inter',
 })
 const bebasNeue = Bebas_Neue({
   weight: ['400'],
@@ -51,7 +63,9 @@ const bebasNeue = Bebas_Neue({
 
 export {
   ubuntu,
+  inter,
   bebasNeue,
+  courierPrime,
   gilroy,
   gilroyThin,
   gilroyUltraLight,

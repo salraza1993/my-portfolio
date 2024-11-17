@@ -1,0 +1,16 @@
+:root {
+  --cursor-color: #d6d6d6;
+  --white: #fff;
+  --white-rgb: 255, 255, 255;
+  --black: #232323;
+  --black-rgb: 35, 35, 35;
+  --full-black: #000000;
+  --full-black-rgb: 0, 0, 0;
+
+  --primary: #E5A624;
+  --primary-rgb: 229, 166, 36;
+  --footer-bg: #E5EEF1;
+  --current-color: inherit;
+  --secondary-glow: radial-gradient(rgba(1, 103, 255, 0.35), rgba(1, 103, 255, 0));
+  --primary-glow: linear-gradient(to bottom right, rgba(var(--primary-rgb), 0), rgba(var(--primary-rgb), 0), rgba(var(--primary-rgb), .3));
+}

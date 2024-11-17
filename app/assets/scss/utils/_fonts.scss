@@ -1,0 +1,22 @@
+:root {
+  --font-size-xxl: 66px;
+  --font-size-xl: calc(var(--font-size-xxl) - 6px);
+  --font-size-lg: calc(var(--font-size-xl) - 6px);
+  --font-size-h1: calc(var(--font-size-lg) - 6px);
+  --font-size-h2: calc(var(--font-size-h1) - 6px);
+  --font-size-h3: calc(var(--font-size-h2) - 6px);
+  --font-size-h4: calc(var(--font-size-h3) - 6px);
+  --font-size-h5: calc(var(--font-size-h4) - 6px);
+  --font-size-h6: calc(var(--bs-font-size-h5) - 6px);
+
+  --gilroy--thin: "Gilroy Thin", "Ubuntu", sans-serif;
+  --gilroy--light: "Gilroy Light", "Ubuntu", sans-serif;
+  --gilroy--ultraLight: "Gilroy UltraLight", "Ubuntu", sans-serif;
+  --gilroy--regular: "Gilroy Regular", "Ubuntu", sans-serif;
+  --gilroy: "Gilroy Regular", "Ubuntu", sans-serif;
+  --gilroy--medium: "Gilroy Medium", "Ubuntu", sans-serif;
+  --gilroy--semiBold: "Gilroy SemiBold", "Ubuntu", sans-serif;
+  --gilroy--bold: "Gilroy Bold", "Ubuntu", sans-serif;
+  --ubuntu: "Ubuntu", "Roboto", sans-serif;
+  --ubuntu: "Inter", "Inter", "Roboto", sans-serif;
+}

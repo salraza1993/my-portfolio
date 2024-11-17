@@ -1,16 +1,25 @@
+"use client"
 import Link from 'next/link';
 import SR_logo from './elements/SR_logo';
 import HamburgerIcon from './elements/HamburgerIcon';
 import GridColumns from './GridColumns';
 import CustomButton from './elements/CustomButton';
+import Navigation from './Navigation';
+import { useEffect, useState } from 'react';
+import ArrowRight from './elements/ArrowRight';
 
 export default function Header() {
-  const menus = [
-    { label: 'Home', path: './', activeState: true },
-    { label: 'About', path: './about', activeState: false },
-    { label: 'Works', path: './portfolio', activeState: false },
-  ];
-  return <header className='header'>
+  const [scrolled, setScrolled] = useState(false);
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) setScrolled(true);
+      else setScrolled(false);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  return <header className={scrolled ? 'header sticked' : 'header'}>
     <div className="wrapper display--flex justify-content--between">
       <div className="header__block">
         <Link href={'./'} className="header__logo">
@@ -22,28 +31,17 @@ export default function Header() {
       </div>
       <div className="header__block">
         <nav className="header__nav">
-          <div className='display--flex align_items--center gap--2'>
-            <ul className="h  eader__nav__menu">
-              {
-                menus.map((menu, index) => {
-                  return <li className='header__nav__menu__list'>
-                    <Link
-                      href={menu.path}
-                      className={`header__nav__menu__list--link ${menu.activeState && 'active'}`}>
-                      {menu.label}
-                    </Link>
-                  </li>
-                })
-              }
-            </ul>
-            <div className="hamburger-menus">
-              <HamburgerIcon />
-            </div>
+          <div className='display--flex align_items--center gap--3'>
+            <Navigation />
+            <Link href={'./'} className="contact-button">
+              <span>Contact Me</span>
+              <ArrowRight />
+            </Link>
           </div>
-          <CustomButton text='Contact Me' path="/contact" />
         </nav>
       </div>
     </div>
     <GridColumns />
+    <div className="header-blur-strip"></div>
   </header>
 }
