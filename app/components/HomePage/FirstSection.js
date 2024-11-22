@@ -20,7 +20,7 @@ export default function FirstSection() {
             <PlusSymbol />
             <span className="lines"></span>
           </div>
-          <h4>
+          <h4 className="inter--light">
             currently based in <span className="gilroy--bold">Dubai</span>, United Arab Emirates
           </h4>
           <span className="scroll-to-bottom">Scroll to know more</span>

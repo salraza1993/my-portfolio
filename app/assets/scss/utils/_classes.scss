@@ -117,11 +117,13 @@ $ubuntuWeight: (100, 300, 400, 500, 600, 700, 900);
     }
   }
 }
+$interFonts: ('thin', 'light', 'regular', 'medium', 'semiBold', 'bold', 'black');
+$interWeight: (100, 200, 300, 400, 500, 600, 700, 900);
 .inter {
-  @for $i from 1 through length($ubuntuFonts) {
-    &--#{nth($ubuntuFonts, $i)} {
-      font-family: var(--ubuntu) !important;
-      font-weight: nth($ubuntuWeight, $i) !important;
+  @for $i from 1 through length($interFonts) {
+    &--#{nth($interFonts, $i)} {
+      font-family: var(--inter) !important;
+      font-weight: nth($interWeight, $i) !important;
     }
   }
 }

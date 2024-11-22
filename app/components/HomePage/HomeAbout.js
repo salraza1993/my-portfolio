@@ -25,7 +25,7 @@ export default function HomeAbout() {
                 Currently I am based in <strong>Dubai, UAE</strong>, and working with <strong>NSAS Toursim L.L.C</strong> as Front-end Developer & UX/UI Designer.
               </p>
             </div>
-            <CustomButton text='More About Me!' path="/about" inline primaryOutline classes="cta-button--large" />
+            <CustomButton text='More About Me!' path="/about" inline primaryOutline classes="cta-button" />
           </div>
         </div>
         <div className="sec-profile">

@@ -8,15 +8,15 @@ export default function TestimonialCard({ data }) {
       <div className="quote-icon mb--3">
         <Image src={quoteIcon} alt="Author Image" />
       </div>
-      <h5 className="gilroy--semiBold line-height--normal">{data.comment}</h5>
+      <h5 className="inter--semiBold line-height--normal">{data.comment}</h5>
     </div>
     <div className="author-profile">
       <div className="author-profile__image">
         <Image src={data.image || profilePlaceHolder} fill={true} alt="Author Image" />
       </div>
       <div className="author-profile__text">
-        <h6 className="m--0 gilroy--bold">{data.name || 'Author Name'}</h6>
-        <small className="ubuntu--medium"><span>{data.designation || 'Position'}</span> | <span>{data.company || 'Company Name'}</span></small>
+        <h6 className="m--0 inter--bold">{data.name || 'Author Name'}</h6>
+        <small><span>{data.designation || 'Position'}</span> | <span>{data.company || 'Company Name'}</span></small>
       </div>
     </div>
   </div>;

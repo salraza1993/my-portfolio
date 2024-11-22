@@ -56,8 +56,9 @@
         max-width: 150px;
         text-wrap: balance;
         line-height: normal;
-        font-family: var(--gilroy--semiBold);
+        font-weight: 500;
         font-size: 0.95rem;
+        line-height: 0.95rem;
         padding-inline-start: calc(var(--mouse-width) * 1.5);
 
         &::after,
@@ -67,17 +68,19 @@
         }
 
         &::after {
-          top: 0;
-          left: 0;
+          top: -5px;
+          left: -1px;
           width: var(--mouse-width);
           height: calc(var(--mouse-width) * 1.618);
           border-radius: var(--mouse-width);
           border: 1px solid rgba(var(--light-rgb), 0.35);
+          background-color: var(--dark);
+          z-index: -1;
         }
 
         &::before {
           inset-inline-start: calc(var(--mouse-width) / 2 - 0px);
-          inset-block-start: calc(var(--mouse-width) / 3);
+          inset-block-start: calc(var(--mouse-width) / 15);
           width: 2px;
           border-radius: 10px;
           height: calc(var(--mouse-width) / 2.5);
@@ -87,7 +90,7 @@
 
         @keyframes mouseScrollStrip {
           0% {
-            inset-block-start: calc(var(--mouse-width) / 3);
+            inset-block-start: calc(var(--mouse-width) / 10);
           }
 
           100% {
@@ -191,7 +194,7 @@
           color: var(--base-color);
           text-transform: uppercase;
           letter-spacing: var(--extra-letters-spacing);
-          font-family: var(--gilroy--bold);
+          font-weight: 700;
           overflow: hidden;
           transition: var(--transition);
           white-space: nowrap;
@@ -252,7 +255,7 @@
       .__developer {
         &:hover {
           --extra-letters-width: max-content;
-          --extra-letters-spacing: 0.35rem;
+          --extra-letters-spacing: 0.25rem;
           --svg-stroke-width: 2;
           --svg-color: var(--primary);
           --svg-stroke-color: var(--primary);

@@ -55,6 +55,15 @@ body {
   scrollbar-width: thin;
   padding-block-end: var(--bottom-sheet-height);
   @include scrollBar();
+  isolation: isolate;
+  &::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    opacity: 0.9;
+    background: transparent url('/images/noise-pattern.png') repeat;
+    z-index: -1;
+  }
 }
 a {
   color: inherit;
@@ -244,12 +253,11 @@ section { position: relative; z-index: 0; }
   gap: 0.3rem;
   height: var(--button-height);
   padding-inline-start: calc(var(--button-height) / 2.5);
-  box-shadow: inset 0 0 0 1px var(--shadow-color);
+  box-shadow: inset 0 0 0 1px var(--border-color);
   transition: var(--transition);
   background-color: var(--button-bg-color);
-  color: var(--button-color);
   cursor: pointer;
-  font-family: var(--gilroy--semiBold);
+  font-weight: 500;
   &__icon {
     position: relative;
     flex-shrink: 0;

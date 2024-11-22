@@ -78,7 +78,6 @@
       align-items: center;
       gap: 1rem;
       font-size: var(--font-size-h5);
-      font-family: var(--gilroy--semiBold);
       margin-block-end: calc(var(--elements-bottom-margins) / 2);
       &::before, &::after {
         content: '';
@@ -95,7 +94,7 @@
       padding-inline: calc(0.5rem + 0.75vw);
       border: 1px solid rgba(var(--black-rgb), 0.25);
       background-color: var(--white);
-      font-family: var(--gilroy--semiBold);
+      font-weight: 600;
       font-size: var(--font-size-h5);
       gap: calc(1rem + 0.25vw);
       transition: var(--transition);

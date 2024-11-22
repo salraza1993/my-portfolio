@@ -145,7 +145,7 @@
   align-items: center;
   width: max-content;
   color: var(--base-color);
-  box-shadow: var(--card-shadow), 0 0 0 1px var(--border-color);
+  box-shadow: var(--card-shadow), 0 0 0 1px var(--primary);
   inset-block-end: calc(100% + calc(var(--strip-pointer-width) * 2));
   inset-inline-end: -50%;
   transition: var(--transition);  
@@ -153,7 +153,7 @@
     inset-inline-end: 0;
     inset-inline-start: calc(0px - (385px / 1.5));
     &:after {
-      inset-inline-end: calc(0% + (var(--strip-pointer-width) * 12));
+      inset-inline-end: calc(0% + (var(--strip-pointer-width) * 15.5));
       // inset-inline-start: calc(0% + (var(--strip-pointer-width) * 4.25));
     }
   }
@@ -167,7 +167,7 @@
     inset-block-start: 100%;
     border-left: var(--strip-pointer-width) solid transparent;
     border-right: var(--strip-pointer-width) solid transparent;
-    border-top: var(--strip-pointer-width) solid var(--base-color);
+    border-top: var(--strip-pointer-width) solid var(--primary);
   }
   .strip-label {
     padding-inline: 1rem;

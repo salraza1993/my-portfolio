@@ -26,7 +26,7 @@ export default function HomeProjects() {
             <img src="/images/man-on-bean-bag.png" alt="Man on Bean Bag" />
           </div>
           <div className="category-tabs-container__content">
-            <h4 className="mb--4 pb--3 gilroy--light">Have a sneak-peek into <strong>my body of work</strong> thus far...</h4>
+            <h4 className="mb--4 pb--3 inter--light">Have a sneak-peek into <strong>my body of work</strong> thus far...</h4>
             <ul className="category-tabs">
               {
                 galleryTabs.map((tab, index) => <li key={index} className="category-tabs__tab">

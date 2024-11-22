@@ -7,19 +7,19 @@
   --base-color: #d6d6d6;
   --base-color-rgb: 186, 186, 186;
   --border-color: #4b4b4b;
-  --border-rgb-color: 75, 75, 75;
+  --border-color-rgb: 75, 75, 75;
   --light: #fff;
   --light-rgb: 255, 255, 255;
   --dark: #232323;
   --dark-rgb: 35, 35, 35;
 
-  --home-about-sec-bg-color: #000;
+  --home-about-sec-bg-color: #1e1e1e;
   --home-about-sec-color: #d6d6d6;
   --home-about-sec-border-color: #545454;
   // --home-about-profile-image: 
   --horizontal-scrollbar-bg: #1A1A1A;
-  --grid-line-color: rgba(var(--border-rgb-color), 0.4);
-  --grid-line-opacity: 0.75;
+  --grid-line-color: rgba(var(--border-color-rgb), 0.4);
+  --grid-line-opacity: 1;
 
   --bottom-sheet-bg: rgba(255, 255, 255, 0.1);
   --bottom-sheet-element-bg: rgba(var(--base-color-rgb), 0.5);
@@ -37,8 +37,8 @@
   --base-color: #232323;
   --base-color-rgb: 35, 35, 35;
   --border-color: #c5c5c5;
-  --border-rgb-color: 197, 197, 197;
-  --light: #232323;
+  --border-color-rgb: 197, 197, 197;
+  --light: #1e1e1e;
   --light-rgb: 35, 35, 35;
   --dark: #ffffff;
   --dark-rgb: 255, 255, 255;
@@ -46,13 +46,13 @@
   --home-about-sec-color: #d6d6d6;
   --home-about-sec-border-color: #545454;
   --horizontal-scrollbar-bg: #dbdbdb;
-  --grid-line-color: rgba(var(--border-rgb-color), 0.35);
+  --grid-line-color: rgba(var(--border-color-rgb), 0.35);
 
   --bottom-sheet-bg: rgba(255, 255, 255, 0.1);
   --bottom-sheet-element-bg: rgba(255, 255, 255, 0.5);
   --bottom-sheet-element-color: var(--base-color);
 
-  --nav-bg: #fff6;
+  --nav-bg: #fff7;
 }
 
 :root {
