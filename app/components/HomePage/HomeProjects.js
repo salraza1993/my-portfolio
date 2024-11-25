@@ -3,6 +3,7 @@ import SectionHeading from "../SectionHeading";
 import ArrowRight from "../elements/ArrowRight";
 import ProjectSlider from "../ProjectSlider";
 import GridColumns from "../GridColumns";
+import Image from "next/image";
 
 export default function HomeProjects() {
   const galleryTabs = [
@@ -18,12 +19,12 @@ export default function HomeProjects() {
           buttonPath="#"
           bigOutlineHeading={'Case Studies &'}
           bigHeading={'Projects'}
-          iconImage={'images/hand_puzzel.png'}
+          iconImage={'/images/hand_puzzel.png'}
           iconImageAlt={'Puzzle Hand'}
-        />
+        />        
         <div className="category-tabs-container">
           <div className="category-tabs-container__illustration">
-            <img src="/images/man-on-bean-bag.png" alt="Man on Bean Bag" />
+            <Image src="/images/man-on-bean-bag.png" alt="Man on Bean Bag" fill priority />
           </div>
           <div className="category-tabs-container__content">
             <h4 className="mb--4 pb--3 inter--light">Have a sneak-peek into <strong>my body of work</strong> thus far...</h4>
@@ -33,7 +34,7 @@ export default function HomeProjects() {
                   <Link className="category-tabs__tab--link" href={tab.path}>
                     <span className="arrow-icon"><ArrowRight /></span>
                     <span className="__icon">
-                      <img src={`/images/${tab.iconName}.png`} alt="" />
+                      <Image src={`/images/${tab.iconName}.png`} alt="" fill priority />
                     </span>
                     {tab.label}
                   </Link>

@@ -48,7 +48,7 @@ export default function BottomSheet() {
           target="_blank"
           className="whatsapp-button">
           <i className="fa-brands fa-whatsapp"></i>
-          <span>Let's Chat!</span>
+          <span>Let&#39;s Chat!</span>
         </Link>
       </div>
       <ul className="lists">

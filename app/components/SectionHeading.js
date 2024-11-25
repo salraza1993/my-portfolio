@@ -1,3 +1,4 @@
+import Image from "next/image";
 import CustomButton from "./elements/CustomButton";
 
 export default function SectionHeading({
@@ -6,7 +7,7 @@ export default function SectionHeading({
   buttonText = 'Explore All',
   bigOutlineHeading = 'Outline text',
   bigHeading = 'Normal Text',
-  iconImage = 'images/hand_puzzel.png',
+  iconImage = '/images/hand_puzzel.png',
   iconImageAlt = 'Image Name',
 }) {
   return <div className="sec-heading-block">
@@ -19,7 +20,7 @@ export default function SectionHeading({
         <span className="outline">{bigOutlineHeading}</span> <br /> {bigHeading}
       </span>
       <span className="__icon">
-        <img src={iconImage} alt={iconImageAlt} />
+        <Image src={iconImage} alt={iconImageAlt} priority fill />
       </span>
     </h2>
   </div>;

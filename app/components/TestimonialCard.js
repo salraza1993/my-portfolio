@@ -6,7 +6,7 @@ export default function TestimonialCard({ data }) {
   return <div className="testimonial-cards__card">
     <div className="mb--3">
       <div className="quote-icon mb--3">
-        <Image src={quoteIcon} alt="Author Image" />
+        <Image src={quoteIcon} alt="Author Image" fill priority />
       </div>
       <h5 className="inter--semiBold line-height--normal">{data.comment}</h5>
     </div>

@@ -14,7 +14,9 @@
     @include objectFit($overFlow: visible);
 
     img {
+      position: relative !important;
       margin-inline-start: calc(-1rem - 0.5vw);
+      object-fit: contain;
     }
   }
 
@@ -79,6 +81,9 @@
             flex-shrink: 0;
             padding: 0.35rem;
             @include objectFit($fit: contain);
+            img {
+              position: relative !important;
+            }
           }
 
           &::before {

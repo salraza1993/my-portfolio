@@ -16,7 +16,7 @@ export default function Testimonials() {
           buttonPath="#"
           bigOutlineHeading={"People's views"}
           bigHeading={'About Me!'}
-          iconImage={'images/hand-clapping.png'}
+          iconImage={'/images/hand-clapping.png'}
           iconImageAlt={'Puzzle Hand'}
         />
         <div className="testimonial-cards">

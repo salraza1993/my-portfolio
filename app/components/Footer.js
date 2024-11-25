@@ -16,7 +16,7 @@ export default function Footer() {
         <div className="footer__content">
           <div className="footer__content__block">
             <h1 className="__heading gilroy--ultraLight fs--xl">
-              Let's stay <span className="gilroy--bold">connected </span>
+              Let&#39;s stay <span className="gilroy--bold">connected </span>
               through <span className="gilroy--bold">digitally</span>
             </h1>
             <div className="social-links">

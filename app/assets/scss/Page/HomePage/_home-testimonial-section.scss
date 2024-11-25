@@ -23,6 +23,7 @@
 
       img {
         filter: drop-shadow(5px 5px 5px rgba(var(--full-black-rgb), 0.15));
+        position: relative !important;
       }
     }
 

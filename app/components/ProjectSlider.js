@@ -9,6 +9,7 @@ import { Scrollbar } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/scrollbar';
 import Link from 'next/link';
+import Image from 'next/image';
 
 // import required modules
 
@@ -36,7 +37,7 @@ export default function ProjectSlider() {
         sliderSlide.map((slide, index) => <SwiperSlide key={index} className="project-slider__slide">
           <Link href={slide.link} className="display--block">
             <div className="project-slider__slide__image">
-              <img src={slide.thumbnail} alt="" />
+              <Image src={slide.thumbnail} alt="" fill priority />
             </div>
           </Link>
         </SwiperSlide>)

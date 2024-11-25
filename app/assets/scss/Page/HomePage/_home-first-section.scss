@@ -49,6 +49,12 @@
       flex-direction: column;
       gap: calc(1rem + 1vw);
 
+      .wave-hand {
+        position: relative; 
+        width: 40px;
+        height: 40px;
+      }
+
       .scroll-to-bottom {
         --mouse-width: 25px;
         position: absolute;
@@ -121,7 +127,14 @@
 
       img {
         max-height: 100%;
+        object-fit: contain;
         transition: inherit;
+        position: relative !important;
+        inset: initial !important;
+        top: initial !important;
+        bottom: initial !important;
+        right: initial !important;
+        left: initial !important;
       }
     }
 
