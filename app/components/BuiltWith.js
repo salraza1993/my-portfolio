@@ -1,9 +1,8 @@
-import React from 'react'
-import NextJsIcon from './elements/nextJsIcon';
 import TypeScriptIcon from './elements/TypeScriptIcon';
 import HtmlIcon from './elements/HtmlIcon';
 import CssIcon from './elements/CssIcon';
 import ScssIcon from './elements/ScssIcon';
+import NextJsIcon from './elements/NextJsIcon';
 
 export default function BuiltWith() {
   return <div className="built-width-container">
