@@ -23,6 +23,8 @@
   padding-block-end: 1rem;
   height: var(--bottom-sheet-height);
   transition: var(--transition);
+  user-select: none;
+  pointer-events: none;
 
   &:is(.content-align-right) { justify-content: end; }
   &:is(.content-align-left) { justify-content: start; }
@@ -36,6 +38,8 @@
     box-shadow: var(--card-shadow);
     width: var(--bottom-sheet-width);
     isolation: isolate;
+    user-select: initial;
+    pointer-events: initial;
     &::after {
       content: '';
       inset: 0;
@@ -148,7 +152,7 @@
   box-shadow: var(--card-shadow), 0 0 0 1px var(--primary);
   inset-block-end: calc(100% + calc(var(--strip-pointer-width) * 2));
   inset-inline-end: -50%;
-  transition: var(--transition);  
+  transition: var(--transition);
   &:is(.alignment-left) {
     inset-inline-end: 0;
     inset-inline-start: calc(0px - (385px / 1.5));

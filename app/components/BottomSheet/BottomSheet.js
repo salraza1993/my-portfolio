@@ -53,12 +53,12 @@ export default function BottomSheet() {
       </div>
       <ul className="lists">
         <li className={`${selectedMenu === "theming" ? 'active' : ''}`}>
-          <span className='popover-icon' onClick={() => menuHandler(e, 'theming')}>
+          <span className='popover-icon' onClick={(e) => menuHandler(e, 'theming')}>
             <i className="fa-solid fa-swatchbook"></i>
           </span>
           <ThemeSelections />
         </li>
-        <li><DownloadResume /></li>
+        <li><DownloadResume classes={"popover-icon my-resume"}><i className="fa-solid fa-download"></i></DownloadResume></li>
         <li className={`${selectedMenu === "alignment" ? 'active' : ''}`}>
           <span className='popover-icon' onClick={(e) => menuHandler(e, 'alignment')}>
             <i className="fa-solid fa-ellipsis-v"></i>

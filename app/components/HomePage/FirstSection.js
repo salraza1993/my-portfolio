@@ -11,7 +11,7 @@ export default function FirstSection() {
       <div className="sub-section">
         <div className="sub-section__block">
           <h3 className="m--0 display--flex align-items--center flex--wrap gap--2">
-            <span className="wave-hand me--2"><Image src={"/images/hello.png"} alt="" fill priority /></span>
+            <span className="wave-hand me--2"><Image src={"/images/hello.png"} alt="" fill unoptimized /></span>
             <span className="gilroy--ultraLight">Hello there, I&#39;m </span>
             <span className="gilroy--bold">Salman Raza</span>
           </h3>

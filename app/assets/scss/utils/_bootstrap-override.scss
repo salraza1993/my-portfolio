@@ -1,3 +1,4 @@
+@import './scss_variables';
 // =============== Container size: [ lg - 1199 ] =============== //
 @media (width < $screen-size--lg) {
   @include containerWidth(var(--max-width-vw), 0, 0);

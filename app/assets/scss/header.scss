@@ -150,6 +150,15 @@
     transition: var(--transition);
     font-weight: 700;
     box-shadow: var(--menu-shadow);
+    .text {
+      white-space: nowrap;
+    }
+    .icon {
+      fill: currentColor;
+      display: flex;
+      align-items: center;
+      @include objectFit($fit: contain, $width: 21px, $height: 21px);
+    }
     &:hover {
       background-color: var(--primary);
       color: var(--white);

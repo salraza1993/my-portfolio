@@ -1,6 +1,5 @@
 import Link from "next/link";
 import SectionHeading from "../SectionHeading";
-import ArrowRight from "../elements/ArrowRight";
 import ProjectSlider from "../ProjectSlider";
 import GridColumns from "../GridColumns";
 import Image from "next/image";
@@ -31,8 +30,7 @@ export default function HomeProjects() {
             <ul className="category-tabs">
               {
                 galleryTabs.map((tab, index) => <li key={index} className="category-tabs__tab">
-                  <Link className="category-tabs__tab--link" href={tab.path}>
-                    <span className="arrow-icon"><ArrowRight /></span>
+                  <Link className="category-tabs__tab--link customCursor" href={tab.path}>
                     <span className="__icon">
                       <Image src={`/images/${tab.iconName}.png`} alt="" fill priority />
                     </span>

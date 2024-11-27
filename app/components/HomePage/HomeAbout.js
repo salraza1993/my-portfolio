@@ -14,7 +14,7 @@ export default function HomeAbout() {
           </div>
           <div className="sec-content__text">
             <h5 className="mb--2 display--flex align-items--center gap--2">
-              <span className=""><Image src={"/images/myself.gif"} alt="" width={60} height={60} /></span>
+              <span className=""><Image src={"/images/myself.gif"} alt="" width={60} height={60} unoptimized /></span>
               <span>Myself</span>
             </h5>
             <h2 className="gilroy--bold fs--h2 __name">Salman Raza</h2>

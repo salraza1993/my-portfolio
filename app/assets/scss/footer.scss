@@ -11,10 +11,10 @@
   &__content {
     position: relative;
     width: 100%;
-    background-color: var(--footer-bg);
     isolation: isolate;
     display: flex;
     justify-content: flex-end;
+    background-image: var(--footer-bg);
     &::after {
       content: '';
       position: absolute;
@@ -31,7 +31,6 @@
       padding-block: calc(1.5rem + 3vw);
       padding-inline-end: calc(1.5rem + 3vw);
       width: calc(var(--wrapper-column-width) * 2);
-      color: var(--black);
       .__heading {
         // text-wrap: balance;
         max-width: var(--elements-max-width);
@@ -93,7 +92,7 @@
       position: relative;
       padding-inline: calc(0.5rem + 0.75vw);
       border: 1px solid rgba(var(--black-rgb), 0.25);
-      background-color: var(--white);
+      background-color: var(--dark);
       font-weight: 600;
       font-size: var(--font-size-h5);
       gap: calc(1rem + 0.25vw);
@@ -108,13 +107,14 @@
           content: '';
           height: 50%;
           width: 1px;
-          background-color: rgba(var(--black-rgb), 0.25);
+          background-color: var(--border-color);
           inset-inline-end: 0;
           position: absolute;
         }
       }
       &:hover {
         background-color: var(--primary);
+        color: var(--primary-color);
         border-color: var(--primary);
         @include cardShadow();
         i::before { scale: 1.2;}
@@ -141,15 +141,14 @@
 
 .built-width-container {
   position: relative;
-  padding: calc(1rem + 1vw);
-  padding-block-end: 0;
+  padding-block-start: calc(1rem + 0.25vw);
   .content-container {
     position: relative;
     background-color: #101010;
     color: var(--white);
     padding-inline: 1.5rem;
-    padding-block: 1.25rem;
-    border-radius: calc(var(--border-radius) * 2);
+    padding-block: 1.35rem 1.25rem;
+    // border-radius: calc(var(--border-radius) * 2);
     font-family: var(--courier-prime);
     font-size: 1.2rem;
     line-height: 1.5rem;

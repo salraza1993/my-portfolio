@@ -1,0 +1,58 @@
+:root {
+  --block-padding: calc(1rem + 1.5vw);
+}
+.about-first-section {
+  width: 100%;
+  height: 85vh;
+  height: 85dvh;
+  min-height: 800px;
+  padding-block: var(--block-padding);
+  
+  .backdrop {
+    position: absolute;
+    inset: 0;
+    .gradient-strip {
+      width: 350px;
+      height: 350px;
+      position: absolute;
+      background: linear-gradient(270deg, var(--primary), #e73c7e, #23a6d5, #23d5ab);
+      background-size: 400% 400%;
+      animation: GradientKeyframes 5s ease infinite;
+      inset-inline-end: 10vw;
+      inset-block-start: 5vw;
+      border-radius: 100px;
+      filter: blur(100px) brightness(100%);
+      opacity: 0.45;
+    }
+    
+  }
+  
+  .sub-section {
+    position: relative;
+    .cta-button {
+      width: calc(var(--wrapper-column-width) * 1);
+      --shadow-hover-color: var(--pdf-color);
+      --button-hover-bg-color: var(--pdf-color);
+      --button-hover-color: var(--light);
+      &__icon {
+        &.__before {
+          color: var(--pdf-color);
+        }
+        &.__after {
+          margin-inline-start: auto;
+        }
+      }
+      &:hover {
+        svg {
+          color: var(--light);
+        }
+      }
+    }
+  }
+}
+
+@keyframes GradientKeyframes {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}

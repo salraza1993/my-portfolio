@@ -1,9 +1,7 @@
 "use client"
 import Link from 'next/link';
 import SR_logo from './elements/SR_logo';
-import HamburgerIcon from './elements/HamburgerIcon';
 import GridColumns from './GridColumns';
-import CustomButton from './elements/CustomButton';
 import Navigation from './Navigation';
 import { useEffect, useState } from 'react';
 import ArrowRight from './elements/ArrowRight';
@@ -34,8 +32,8 @@ export default function Header() {
           <div className='display--flex align_items--center gap--3'>
             <Navigation />
             <Link href={'./'} className="contact-button">
-              <span>Contact Me</span>
-              <ArrowRight />
+              <span className='text'>Contact Me</span>
+              <span className="icon"><ArrowRight /></span>
             </Link>
           </div>
         </nav>

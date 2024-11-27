@@ -9,19 +9,20 @@ export default function SectionHeading({
   bigHeading = 'Normal Text',
   iconImage = '/images/hand_puzzel.png',
   iconImageAlt = 'Image Name',
+  noPadding = false,
 }) {
-  return <div className="sec-heading-block">
+  return <div className={`sec-heading-block ${noPadding && 'no-padding'}`}>
     <div className="sec-heading-block__top-strip">
       <h5 className="heading--small gilroy--bold">{smallHeading}</h5>
-      <CustomButton text={buttonText} path={buttonPath} />
+      {buttonPath  && <CustomButton text={buttonText} path={buttonPath} />}
     </div>
     <h2 className="heading--big">
       <span className="__text">
         <span className="outline">{bigOutlineHeading}</span> <br /> {bigHeading}
       </span>
-      <span className="__icon">
+      {iconImage && <span className="__icon">
         <Image src={iconImage} alt={iconImageAlt} priority fill />
-      </span>
+      </span>}
     </h2>
   </div>;
 }

@@ -111,8 +111,6 @@
       width: 95%;
       height: var(--svg-stroke-width);
       z-index: 1;
-      margin-inline-start: 1px;
-      margin-block-start: -1px;
       background-color: var(--svg-stroke-color);
     }
 
@@ -178,7 +176,6 @@
         height: var(--svg-element-height);
         color: var(--svg-element-color);
         transition: var(--transition);
-        cursor: url('/images/cursor-dark-mode.svg') 50 50, auto;
 
         path,
         rect {

@@ -20,9 +20,6 @@ export default function ProjectSlider() {
     {thumbnail: '/images/slide-3.jpg', link: '/'},
     {thumbnail: '/images/slide-3.jpg', link: '/'},
     {thumbnail: '/images/slide-3.jpg', link: '/'},
-    {thumbnail: '/images/slide-3.jpg', link: '/'},
-    {thumbnail: '/images/slide-3.jpg', link: '/'},
-    {thumbnail: '/images/slide-3.jpg', link: '/'},
   ]);
   return <>
     <Swiper
@@ -35,10 +32,8 @@ export default function ProjectSlider() {
     >
       {
         sliderSlide.map((slide, index) => <SwiperSlide key={index} className="project-slider__slide">
-          <Link href={slide.link} className="display--block">
-            <div className="project-slider__slide__image">
-              <Image src={slide.thumbnail} alt="" fill priority />
-            </div>
+          <Link href={slide.link} className="project-slider__slide__image custom-cursor">
+            <Image src={slide.thumbnail} alt="" fill priority />
           </Link>
         </SwiperSlide>)
       }

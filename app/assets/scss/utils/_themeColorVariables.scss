@@ -12,19 +12,18 @@
   --light-rgb: 255, 255, 255;
   --dark: #232323;
   --dark-rgb: 35, 35, 35;
-
   --home-about-sec-bg-color: #1e1e1e;
   --home-about-sec-color: #d6d6d6;
   --home-about-sec-border-color: #545454;
-  // --home-about-profile-image: 
   --horizontal-scrollbar-bg: #1A1A1A;
   --grid-line-color: rgba(var(--border-color-rgb), 0.4);
   --grid-line-opacity: 1;
-
   --bottom-sheet-bg: rgba(255, 255, 255, 0.1);
   --bottom-sheet-element-bg: rgba(var(--base-color-rgb), 0.5);
   --bottom-sheet-element-color: #fff;
   --nav-bg: #454545;
+  --footer-bg: linear-gradient(-135deg, #353535 0%, #535a5a 100%);
+  --pdf-color: #d14d3c;
 
 }
 
@@ -51,8 +50,9 @@
   --bottom-sheet-bg: rgba(255, 255, 255, 0.1);
   --bottom-sheet-element-bg: rgba(255, 255, 255, 0.5);
   --bottom-sheet-element-color: var(--base-color);
-
   --nav-bg: #fff7;
+  --footer-bg: linear-gradient(-135deg, #FFFEFF 0%, #e9ffff 100%);
+  --pdf-color: #e67364;
 }
 
 :root {

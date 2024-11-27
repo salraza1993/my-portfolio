@@ -1,11 +1,11 @@
-import React from 'react'
 import GridColumns from '../components/GridColumns';
+import AboutFirstSection from '../components/AboutPage/AboutFirstSection';
+import '@/app/assets/scss/Page/AboutPage/main.scss';
 
 export default function About() {
   return (
-    <section className="sub-hero">
-      <h1>About</h1>
-      <GridColumns />
-    </section>
+    <>
+      <AboutFirstSection />
+    </>
   )
 }
