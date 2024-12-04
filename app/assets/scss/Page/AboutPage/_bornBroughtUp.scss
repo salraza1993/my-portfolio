@@ -2,12 +2,134 @@
 
 :root {
   --block-padding: calc(1rem + 1.5vw);
+  --block-minus-margin: calc(var(--block-padding) * 2);
+  --flag-width: 155px;
+  --flag-height: calc(var(--flag-width) + 40px);
+  --map-width: 850px;
+  --map-height: 680px;
 }
 
 .got-born-section {
   position: relative;
+  padding-block-start: var(--block-minus-margin);
+  z-index: 1;
+  user-select: none;
   &__content {
     position: relative;
     background-color: var(--abt-content-bg);
+    display: flex;
+
+    .text-block {
+      position: relative;
+      padding-inline: calc(var(--block-padding) * 1.5);
+      text-wrap: balance;
+      .flag {
+        position: relative;
+        width: var(--flag-width);
+        height: var(--flag-height);
+        margin-block-start: calc(0px - calc(var(--block-minus-margin) / 1));
+        margin-block-end: calc(var(--block-minus-margin) / 2);
+      }
+    }
+
+    .india-map-container {
+      position: relative;
+      flex-shrink: 0;
+      width: var(--map-width);
+      min-height: var(--map-height);
+      .india-map {
+        position: absolute;
+        inset: 0;
+        overflow: clip;
+        height: 100%;
+        padding-block-start: var(--block-padding);
+        svg {
+          width: 115%;
+          color: var(--india-map-stroke-color);
+          path {
+            stroke-width: 2px;
+          }
+          #highlighted-parts {
+            color: rgba(var(--body-color-rgb), .5);
+            stroke: none;
+            z-index: 1;
+          }
+        }
+        .highlighter-container {
+          --pointer-width: 20px;
+          position: absolute;
+          width: 450px;
+          height: 210px;
+          inset-inline-end: 18%;
+          inset-block-end: 23%;
+          transform-origin: center;
+          .start, .end {
+            position: absolute;
+            width: var(--pointer-width);
+            height: var(--pointer-width);
+            background-color: var(--body-bg);
+            border-radius: 50%;
+            cursor: pointer;
+            overflow: visible;
+            &::after,
+            &::before {
+              content: '';
+              position: absolute;
+              width: 100%;
+              height: 100%;
+              border-radius: 50%;
+              animation: bubble 2.5s infinite;
+              background-color: inherit;
+              opacity: 0;
+            }
+            &::after { animation-delay: 0s; }
+            &::before {  animation-delay: 0.8s; }
+          }
+          .start {
+            inset-block-end: 20%;
+            inset-inline-end: 20%;
+          }
+          .end {
+            --pointer-width: 15px;
+            inset-block-start: 21%;
+            inset-inline-start: 12.5%;
+            background-color: var(--accent);
+          }
+          .connecting-strip {
+            position: absolute;
+            inset-inline-start: 45%;
+            inset-block-start: -10%;
+            width: 2px;
+            height: 250px;
+            border: 1px dashed var(--body-color);
+            rotate: -69deg;
+          }
+        }
+        .country-name {
+          position: absolute;
+          inset-inline-end: 5%;
+          inset-block-start: 15%;
+          text-transform: uppercase;
+          font-size: var(--font-size-h3);
+          letter-spacing: calc(var(--block-padding) / 1.25);
+          white-space: nowrap;
+          opacity: 0.25;
+        }
+      }
+
+    }
+    
+  }
+}
+
+@keyframes bubble {
+  0% {
+    transform: scale(0.5);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(3);
+    opacity: 0;
   }
 }
