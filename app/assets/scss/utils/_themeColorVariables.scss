@@ -1,13 +1,41 @@
+@mixin commonVariables() {
+  --body-bg: var(--primary-200);
+  --body-bg-rgb: var(--primary-200-rgb);
+  --border-color: var(--primary-400);
+  --bs-primary: var(--accent);
+  --bs-primary-rgb: var(--accent-rgb);
+  --bs-primary-color: var(--accent-color);
+  --bs-primary-color-rgb: var(--accent-color-rgb);
+
+  --bs-secondary: var(--secondary);
+  --bs-secondary-rgb: var(--secondary-rgb);
+  --bs-secondary-color: var(--secondary-color);
+  --bs-secondary-color-rgb: var(--secondary-color-rgb);
+
+  --svg-primary: var(--accent);
+  --svg-secondary: #BDE2C2;
+  --svg-accent--dark: var(--accent);
+  --svg-accent--light: #BDE2C2;
+  --svg-secondary--dark: var(--secondary);
+  --svg-secondary--light: #b4b6e4;
+}
 // ========== [ Dark Mode colors ] ========== //
 @mixin darkModeColors() {
   --bg-start-rgb: 35, 35, 35;
   --bg-end-rgb: 35, 35, 35;
-  --base-bg: #232323;
-  --base-bg-rgb: 35, 35, 35;
-  --base-color: #d6d6d6;
-  --base-color-rgb: 186, 186, 186;
+  --body-bg: #232323;
+  --body-bg-rgb: 35, 35, 35;
+  --body-color: #d6d6d6;
+  --body-color-rgb: 186, 186, 186;
   --border-color: #4b4b4b;
   --border-color-rgb: 75, 75, 75;
+  --primary-100: #252525;
+  --primary-100-rgb: 37, 37, 37;
+  --primary-200: #303030;
+  --primary-200-rgb: 48, 48, 48;
+  --primary-300: #3F3F3F;
+  --primary-300-rgb: 63, 63, 63;
+  --primary-400: #4e4e4e;
   --light: #fff;
   --light-rgb: 255, 255, 255;
   --dark: #232323;
@@ -19,11 +47,13 @@
   --grid-line-color: rgba(var(--border-color-rgb), 0.4);
   --grid-line-opacity: 1;
   --bottom-sheet-bg: rgba(255, 255, 255, 0.1);
-  --bottom-sheet-element-bg: rgba(var(--base-color-rgb), 0.5);
+  --bottom-sheet-element-bg: rgba(var(--body-color-rgb), 0.5);
   --bottom-sheet-element-color: #fff;
   --nav-bg: #454545;
   --footer-bg: linear-gradient(-135deg, #353535 0%, #535a5a 100%);
   --pdf-color: #d14d3c;
+  --abt-content-bg: #484848;
+  --abt-content-color: #e6e6e6;
 
 }
 
@@ -31,12 +61,19 @@
 @mixin lightModeColors() {
   --bg-start-rgb: 230, 230, 230;
   --bg-end-rgb: 243, 243, 243;
-  --base-bg: #f2f2f2;
-  --base-bg-rgb: 243, 243, 243;
-  --base-color: #232323;
-  --base-color-rgb: 35, 35, 35;
+  --body-bg: #f2f2f2;
+  --body-bg-rgb: 243, 243, 243;
+  --body-color: #232323;
+  --body-color-rgb: 35, 35, 35;
   --border-color: #c5c5c5;
   --border-color-rgb: 197, 197, 197;
+  --primary-100: #FFFFFF;
+  --primary-100-rgb: 255, 255, 255;
+  --primary-200: #f1f1f1;
+  --primary-200-rgb: 241, 241, 241;
+  --primary-300: #DDDDDD;
+  --primary-300-rgb: 221, 221, 221;
+  --primary-400: #CCCCCC;
   --light: #1e1e1e;
   --light-rgb: 35, 35, 35;
   --dark: #ffffff;
@@ -49,10 +86,12 @@
 
   --bottom-sheet-bg: rgba(255, 255, 255, 0.1);
   --bottom-sheet-element-bg: rgba(255, 255, 255, 0.5);
-  --bottom-sheet-element-color: var(--base-color);
+  --bottom-sheet-element-color: var(--body-color);
   --nav-bg: #fff7;
   --footer-bg: linear-gradient(-135deg, #FFFEFF 0%, #e9ffff 100%);
   --pdf-color: #e67364;
+  --abt-content-bg: var(--primary-100);
+  --abt-content-color: var(--body-color);
 }
 
 :root {

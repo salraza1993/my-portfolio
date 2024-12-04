@@ -14,7 +14,7 @@ export default function SectionHeading({
   return <div className={`sec-heading-block ${noPadding && 'no-padding'}`}>
     <div className="sec-heading-block__top-strip">
       <h5 className="heading--small gilroy--bold">{smallHeading}</h5>
-      {buttonPath  && <CustomButton text={buttonText} path={buttonPath} />}
+      { buttonPath  && <CustomButton text={buttonText} path={buttonPath} /> }
     </div>
     <h2 className="heading--big">
       <span className="__text">

@@ -139,10 +139,10 @@ $interWeight: (100, 200, 300, 400, 500, 600, 700, 900);
 .text {
   @mixin classes() {
     &--primary, &-primary {
-      color: var(--primary) !important;
+      color: var(--accent) !important;
     }
     &--color, &-color {
-      color: var(--base-color) !important;
+      color: var(--body-color) !important;
     }
     &-secondary--color, &-secondary-color, &-secondary, &--secondary {
       color: var(--bg-secondary-color) !important;
@@ -175,7 +175,7 @@ $interWeight: (100, 200, 300, 400, 500, 600, 700, 900);
 }
 .bg {
   &-primary, &--primary {
-    background-color: var(--primary) !important;
+    background-color: var(--accent) !important;
   }
   &-secondary, &--secondary {
     background-color: var(--bg-secondary-color) !important;
@@ -292,7 +292,7 @@ $interWeight: (100, 200, 300, 400, 500, 600, 700, 900);
 }
 
 @mixin lightStyles() {
-  .text-primary--dark-mode-transparent { color: var(--primary) !important; }
+  .text-primary--dark-mode-transparent { color: var(--accent) !important; }
 }
 
 @mixin darkStyles() {
@@ -314,7 +314,7 @@ $interWeight: (100, 200, 300, 400, 500, 600, 700, 900);
     &-white, &--light { color: var(--light) !important; }
     &-black, &--black { color: var(--dark) !important; }
     &-text-color, &--text-color { color: var(--text-color) !important; }
-    &-primary, &--primary { color: var(--primary) !important; }
+    &-primary, &--primary { color: var(--accent) !important; }
     &-secondary, &--secondary { color: var(--secondary) !important; }
     &-danger, &--danger { color: var(--danger) !important; }
     &-success, &--success { color: var(--success) !important; }

@@ -1,0 +1,13 @@
+@import './../../utils/utils.scss';
+
+:root {
+  --block-padding: calc(1rem + 1.5vw);
+}
+
+.got-born-section {
+  position: relative;
+  &__content {
+    position: relative;
+    background-color: var(--abt-content-bg);
+  }
+}

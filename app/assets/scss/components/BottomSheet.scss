@@ -1,3 +1,4 @@
+@import './../utils/utils.scss';
 .bottom-sheet-wrapper {
   --elements-height: 42px;
   --button-bg: #43d954;
@@ -66,7 +67,7 @@
       display: flex;
       align-items: center;
       gap: 1rem;
-      color: var(--base-color);
+      color: var(--body-color);
     }
 
     .whatsapp-button {
@@ -122,10 +123,15 @@
           transition: var(--transition);
           cursor: pointer;
           box-shadow: var(--card-shadow);
+          @include objectFit($fit: contain, $overFlow: visible, $borderRadius: 0);
+          &:has(svg) {
+            border-radius: none;
+            padding: 0.6rem;
+          }
   
           &:hover,
           &:is(.active) {
-            background-color: var(--primary);
+            background-color: var(--accent);
             color: var(--white);
           }
         }
@@ -133,7 +139,7 @@
           .popover-container {
             display: flex !important;
           }
-          .popover-icon { background-color: var(--primary); color: var(--white); }
+          .popover-icon { background-color: var(--accent); color: var(--white); }
         }
       }
     }
@@ -141,15 +147,15 @@
 }
 .popover-container {
   position: absolute;
-  background-color: rgba(var(--base-bg-rgb), 0.5);
+  background-color: rgba(var(--body-bg-rgb), 0.5);
   backdrop-filter: blur(20px);
   box-shadow: 0 0 0 1px var(--border-color);
   border-radius: var(--strip-height);
   display: none !important;
   align-items: center;
   width: max-content;
-  color: var(--base-color);
-  box-shadow: var(--card-shadow), 0 0 0 1px var(--primary);
+  color: var(--body-color);
+  box-shadow: var(--card-shadow), 0 0 0 1px var(--accent);
   inset-block-end: calc(100% + calc(var(--strip-pointer-width) * 2));
   inset-inline-end: -50%;
   transition: var(--transition);
@@ -171,14 +177,14 @@
     inset-block-start: 100%;
     border-left: var(--strip-pointer-width) solid transparent;
     border-right: var(--strip-pointer-width) solid transparent;
-    border-top: var(--strip-pointer-width) solid var(--primary);
+    border-top: var(--strip-pointer-width) solid var(--accent);
   }
   .strip-label {
     padding-inline: 1rem;
     display: grid;
     place-items: center;
     text-align: center;
-    background-color: rgba(var(--base-color-rgb), 0.05);
+    background-color: rgba(var(--body-color-rgb), 0.05);
     height: calc(var(--strip-height) + 0.2rem);
     border-radius: var(--strip-height);
     cursor: not-allowed;
@@ -208,7 +214,7 @@
       text-transform: capitalize;
       cursor: pointer;
       &:not(.active):hover {
-        background-color: rgba(var(--base-bg-rgb), 0.1);
+        background-color: rgba(var(--body-bg-rgb), 0.1);
       }
       &:is(.active) {
         color: var(--dark);
@@ -221,7 +227,7 @@
       height: var(--strip-height);
       border-radius: var(--strip-height);
       z-index: -1;
-      background-color: var(--primary);
+      background-color: var(--accent);
       color: var(--white);
       inset-inline-start: var(--active-strip-position);
       transition: var(--transition);
@@ -241,7 +247,7 @@
   &:is(.theme-selection) {
     --appearance-block-width: 150px;
     --appearance-block-element-height: 40px;
-    color: var(--base-color);
+    color: var(--body-color);
     border-radius: calc(var(--border-radius) * 1.5);
     gap: 1rem;
     padding-inline: 0.5rem;
@@ -279,13 +285,13 @@
             place-items: center;
           }
           &:not(.active):hover {
-            background-color: rgba(var(--base-bg-rgb), 0.1);
+            background-color: rgba(var(--body-bg-rgb), 0.1);
           }
           &:is(.active) { font-weight: 700; color: var(--dark); }
         }
         .active-strip {
           width: 100%;
-          background-color: var(--primary);
+          background-color: var(--accent);
           height: var(--appearance-block-element-height);
           position: absolute;
           inset-block-start: 0;

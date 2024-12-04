@@ -7,13 +7,12 @@
   --full-black: #000000;
   --full-black-rgb: 0, 0, 0;
 
-  --primary: #E5A624;
-  --primary-rgb: 229, 166, 36;
-  --primary-color: #E5A624;
-  --primary-color: #252525;
-  --primary-color-rgb: 35, 35, 35;
+  --accent: #E5A624;
+  --accent-rgb: 229, 166, 36;
+  --accent-color: #252525;
+  --accent-color-rgb: 35, 35, 35;
   --footer-bg: #E5EEF1;
   --current-color: inherit;
   --secondary-glow: radial-gradient(rgba(1, 103, 255, 0.35), rgba(1, 103, 255, 0));
-  --primary-glow: linear-gradient(to bottom right, rgba(var(--primary-rgb), 0), rgba(var(--primary-rgb), 0), rgba(var(--primary-rgb), .3));
+  --accent-glow: linear-gradient(to bottom right, rgba(var(--accent-rgb), 0), rgba(var(--accent-rgb), 0), rgba(var(--accent-rgb), .3));
 }

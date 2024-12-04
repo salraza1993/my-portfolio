@@ -1,7 +1,6 @@
-import React from 'react'
+import Image from 'next/image';
 import GridColumns from '../GridColumns';
 import SectionHeading from '../SectionHeading';
-import Link from 'next/link';
 import DownloadArrow from '../elements/DownloadArrow';
 import PdfIcon from '../elements/PdfIcon';
 
@@ -35,6 +34,9 @@ export default function AboutFirstSection() {
               <DownloadArrow />
             </span>
           </a>
+          <div className="my-profile-image">
+            <Image src={"/images/profile-image.png"} alt={'My Image'} fill priority  />
+          </div>
         </div>
       </div>
       <GridColumns />

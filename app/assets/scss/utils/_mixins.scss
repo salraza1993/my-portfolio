@@ -12,7 +12,7 @@
   gap: $gap;
 }
 
-@mixin scrollBar($width: var(--scroll-bar-width), $track: transparent, $thumb: var(--primary), $pointerEvent: initial) {
+@mixin scrollBar($width: var(--scroll-bar-width), $track: transparent, $thumb: var(--accent), $pointerEvent: initial) {
   &::-webkit-scrollbar-track {
     background: $track;
     pointer-events: $pointerEvent;
@@ -50,16 +50,26 @@
   overflow: hidden;
 }
 
-@mixin objectFit( $width: 100%,  $height: 100%,  $maxWidth: 100%,  $maxHeight: 100%,  $fit: cover,  $position: center, $overFlow: hidden) {
+@mixin objectFit(
+  $width: 100%,  
+  $height: 100%,  
+  $maxWidth: 100%,  
+  $maxHeight: 100%,  
+  $fit: cover,  
+  $objectPosition: center, 
+  $overFlow: hidden, 
+  $borderRadius: inherit,
+  $position: relative) {
   overflow: $overFlow;
   img, svg {
+    position: $position !important;
     max-width: $maxWidth;
     max-height: $maxHeight;
     width: $width !important;
     height: $height !important;
     object-fit: $fit;
-    object-position: $position;
-    border-radius: inherit;
+    object-position: $objectPosition;
+    border-radius: $borderRadius;
   }
 }
 
@@ -75,7 +85,7 @@
     --remain-vw-width: calc(calc(100vw - #{$width}) + calc(var(--gutter-x) * 1));
   }
 }
-@mixin outlineTextShadow($color: rgba(var(--base-color-rgb), 0.5), $borderWidth: 1px) {
+@mixin outlineTextShadow($color: rgba(var(--body-color-rgb), 0.5), $borderWidth: 1px) {
   text-shadow: 
   -#{$borderWidth} -#{$borderWidth} 0 $color, 
   0 -#{$borderWidth} 0 $color, 

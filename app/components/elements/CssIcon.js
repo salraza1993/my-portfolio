@@ -1,5 +1,9 @@
 export default function CssIcon() {
-  return <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
-    <path fill='currentColor' d="M0 32l34.9 395.8L192 480l157.1-52.2L384 32H0zm313.1 80l-4.8 47.3L193 208.6l-.3 .1h111.5l-12.8 146.6-98.2 28.7-98.8-29.2-6.4-73.9h48.9l3.2 38.3 52.6 13.3 54.7-15.4 3.7-61.6-166.3-.5v-.1l-.2 .1-3.6-46.3L193.1 162l6.5-2.7H76.7L70.9 112h242.2z" />
-  </svg>;
+  return <svg xmlns="http://www.w3.org/2000/svg" width="64" height="65" viewBox="0 0 64 65">
+    <g id="css3" transform="translate(-1306 -1222)">
+      <rect id="Rectangle_330" data-name="Rectangle 330" width="64" height="65" rx="32" transform="translate(1306 1222)" fill="#246eb6" />
+      <path id="Path_552" data-name="Path 552" d="M4.61,42.436.94.861H42.345L38.681,42.436,21.642,47.307ZM0,0,3.8,43.1l17.838,5.1,17.844-5.1L43.285,0Z" transform="translate(1315.106 1234.438)" fill="#fff" />
+      <path id="Path_553" data-name="Path 553" d="M36.093,9.657,35.378,21.08,34.371,37.5,23.093,41.216,11.816,37.5l-.43-7.851H17.1l.138,3.573,5.854,2,5.854-2,.43-6.422H16.818l-.293-5.725H29.671l.422-5.708H10.387L9.965,9.657Z" transform="translate(1313.72 1233.094)" fill="#fff" fillRule="evenodd" />
+    </g>
+  </svg>
 }

@@ -57,8 +57,8 @@
               @include centerItems();
               i { transition: scale 0.3s ease-in;}
               &:hover {
-                background-color: var(--base-bg);
-                color: var(--base-color);
+                background-color: var(--body-bg);
+                color: var(--body-color);
                 i {scale: 1.25;}
               }
             }
@@ -113,9 +113,9 @@
         }
       }
       &:hover {
-        background-color: var(--primary);
+        background-color: var(--accent);
         color: var(--primary-color);
-        border-color: var(--primary);
+        border-color: var(--accent);
         @include cardShadow();
         i::before { scale: 1.2;}
       }

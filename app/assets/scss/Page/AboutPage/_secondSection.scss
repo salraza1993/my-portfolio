@@ -1,0 +1,76 @@
+@import './../../utils/utils.scss';
+
+:root {
+  --block-padding: calc(1rem + 1.5vw);
+  --man-on-couch-size: calc(var(--wrapper-column-width) * 1.15);
+  --paragraph-font-size: calc(var(--font-size-h5) / 1.15);
+  --paragraph-line-height: calc(var(--paragraph-font-size) * 1.5);
+}
+.second-section {
+  width: 100%;
+  .content {
+    position: relative;
+    background-color: var(--abt-content-bg);
+    color: var(--abt-content-color);
+    margin-block-start: -1px;
+    margin-inline-start: calc(var(--wrapper-column-width) * 1);
+    padding: calc(var(--block-padding) * 1.5);
+    padding-inline-end: calc(var(--block-padding) * 2);
+    padding-inline-start: calc(var(--wrapper-column-width) * 1);
+    .currentCompany { white-space: nowrap;}
+    &__logo {
+      position: absolute;
+      inset-block-start: 10%;
+      inset-inline-end: 100%;
+      width: calc(var(--wrapper-column-width) * 1);
+      display: flex;
+      justify-content: center;
+    }
+
+    .hello-text {
+      position: absolute;
+      text-orientation: mixed;
+      writing-mode: vertical-rl;
+      font-size: calc(var(--font-size-xxl) * 2.3);
+      line-height: calc(var(--font-size-xxl) * 1.5);
+      rotate: 180deg;
+      color: var(--body-bg);
+      inset-inline-start: 0;
+      inset-block-end: 0;
+      width: calc(108px + 1vw);
+      overflow: clip;
+    }
+    .man-sitting-on-couch {
+      position: absolute;
+      inset-inline-end: calc(100% - calc(var(--man-on-couch-size) / 2));
+      inset-block-start: calc(100% - calc(var(--man-on-couch-size) / 1.5));
+      width: var(--man-on-couch-size);
+      height: var(--man-on-couch-size);
+      @include objectFit($fit: contain);
+    }
+  }
+  .sub-content-wrapper {
+    position: relative;
+    padding-block-start: calc(var(--man-on-couch-size) / 2);
+    padding-inline-start: calc(var(--wrapper-column-width) * 1);
+    display: flex;
+    align-items: center;
+    .sub-content {
+      position: relative;
+      padding-inline-end: calc(var(--wrapper-column-width) * 1);
+      p { 
+        font-size: var(--paragraph-font-size); 
+        line-height: var(--paragraph-line-height);
+        font-weight: 300;
+      }
+    }
+    .sub-content__icon {
+      position: absolute;
+      width: calc(var(--wrapper-column-width) * 1);
+      aspect-ratio: 2 / 1.5;
+      flex-shrink: 0;
+      inset-inline-end: 0;
+      @include objectFit($fit: contain);
+    }
+  }
+}

@@ -7,6 +7,7 @@ import useClickOutside from '@/app/Handlers/ClickOutsideHandler';
 import { LocalStorageMainKey, useLocalStorage } from '@/app/Contexts/LocalStorageContext';
 import ThemeSelections from './ThemeSelections';
 import DownloadResume from './DownloadResume';
+import DownloadArrow from '../elements/DownloadArrow';
 
 export default function BottomSheet() {
   const { getItem, setItem } = useLocalStorage();
@@ -58,7 +59,11 @@ export default function BottomSheet() {
           </span>
           <ThemeSelections />
         </li>
-        <li><DownloadResume classes={"popover-icon my-resume"}><i className="fa-solid fa-download"></i></DownloadResume></li>
+        <li>
+          <DownloadResume classes={"popover-icon my-resume"}>
+            <DownloadArrow />
+          </DownloadResume>
+        </li>
         <li className={`${selectedMenu === "alignment" ? 'active' : ''}`}>
           <span className='popover-icon' onClick={(e) => menuHandler(e, 'alignment')}>
             <i className="fa-solid fa-ellipsis-v"></i>

@@ -3,6 +3,7 @@ import HtmlIcon from './elements/HtmlIcon';
 import CssIcon from './elements/CssIcon';
 import ScssIcon from './elements/ScssIcon';
 import NextJsIcon from './elements/NextJsIcon';
+import FigmaIcon from './elements/FigmaIcon';
 
 export default function BuiltWith() {
   return <div className="built-width-container">
@@ -19,9 +20,11 @@ export default function BuiltWith() {
         <span className='text-function'>using</span>
         <span className='text-function'>(</span>
         <span className='text-array'>[</span>
+        <span className='icon-nj icon'><FigmaIcon /></span>
+        <span className='text-nj'>Figma</span>
+        <span className='text-dark'>,</span>
         <span className='icon-nj icon'><NextJsIcon /></span>
         <span className='text-nj'>NextJs</span>
-        <span className='text-dark'>,</span>
         <span className='icon-ts icon'><TypeScriptIcon /></span>
         <span className='text-ts'>TypeScript</span>
         <span className='text-dark'>,</span>

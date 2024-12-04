@@ -93,7 +93,7 @@
             height: 100%;
             width: var(--tab-hover-bg-width);
             inset-inline-start: 0;
-            background-color: var(--primary);
+            background-color: var(--accent);
             z-index: -1;
             transition: var(--transition);
           }
@@ -124,7 +124,7 @@
               width: 100%;
               inset-block-end: 0;
               inset-inline-start: 0;
-              background-color: var(--primary);
+              background-color: var(--accent);
               z-index: -1;
               transition: var(--transition);
             }
@@ -171,7 +171,7 @@
         transition: var(--transition);
 
         .swiper-scrollbar-drag {
-          background-color: var(--primary);
+          background-color: var(--accent);
           transition: inherit;
         }
 
@@ -186,14 +186,14 @@
     }
 
     &__slide {
-      background-color: var(--base-color);
+      background-color: var(--body-color);
       position: relative;
       width: var(--slide-width);
       background-color: var(--light);
       overflow: hidden;
 
       &__image {
-        background-color: var(--base-color);
+        background-color: var(--body-color);
         width: 100%;
         height: 100%;
         position: relative;

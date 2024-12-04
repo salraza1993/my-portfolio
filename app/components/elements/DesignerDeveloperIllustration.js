@@ -76,76 +76,76 @@ export default function DesignerDeveloperIllustration() {
           <g id="Group_381" dataName="Group 381">
             <path id="Path_224" dataName="Path 224" d="M407.121,53.322,238.052,167.785a5.163,5.163,0,0,1-7.169-1.379v0l-17.4-25.692a5.164,5.164,0,0,1,1.381-7.171L383.937,19.078a5.163,5.163,0,0,1,7.169,1.379v0l17.4,25.692a5.164,5.164,0,0,1-1.381,7.171" transform="translate(581 468.059)" fill="#e5a624" />
             <g id="Group_345" dataName="Group 345" transform="translate(581 468.059)">
-              <g id="Group_344" dataName="Group 344" clip-path="url(#clip-path)">
+              <g id="Group_344" dataName="Group 344" clipPath="url(#clip-path)">
                 <g id="Group_343" dataName="Group 343" style={{"isolation": "isolate"}}>
                   <g id="Group_342" dataName="Group 342">
-                    <g id="Group_341" dataName="Group 341" clip-path="url(#clip-path-2)">
+                    <g id="Group_341" dataName="Group 341" clipPath="url(#clip-path-2)">
                       <g id="Group_313" dataName="Group 313" style={{"isolation": "isolate"}}>
                         <g id="Group_312" dataName="Group 312">
-                          <g id="Group_311" dataName="Group 311" clip-path="url(#clip-path-3)">
+                          <g id="Group_311" dataName="Group 311" clipPath="url(#clip-path-3)">
                             <text id="U" transform="translate(246.875 149.249) rotate(-34.088)" fill="currentColor" className="text--color" font-size="28" font-family="BebasNeue-Regular, Bebas Neue"><tspan x="0" y="0">U</tspan></text>
                           </g>
                         </g>
                       </g>
                       <g id="Group_316" dataName="Group 316" style={{"isolation": "isolate"}}>
                         <g id="Group_315" dataName="Group 315">
-                          <g id="Group_314" dataName="Group 314" clip-path="url(#clip-path-4)">
+                          <g id="Group_314" dataName="Group 314" clipPath="url(#clip-path-4)">
                             <text id="X" transform="translate(257.564 142.015) rotate(-34.088)" fill="currentColor" className="text--color" font-size="28" font-family="BebasNeue-Regular, Bebas Neue"><tspan x="0" y="0">X</tspan></text>
                           </g>
                         </g>
                       </g>
                       <g id="Group_319" dataName="Group 319" style={{"isolation": "isolate"}}>
                         <g id="Group_318" dataName="Group 318">
-                          <g id="Group_317" dataName="Group 317" clip-path="url(#clip-path-5)">
+                          <g id="Group_317" dataName="Group 317" clipPath="url(#clip-path-5)">
                             <text id="_" dataName="/" transform="translate(268.601 134.545) rotate(-34.088)" fill="currentColor" className="text--color" font-size="28" font-family="BebasNeue-Regular, Bebas Neue"><tspan x="0" y="0">/</tspan></text>
                           </g>
                         </g>
                       </g>
                       <g id="Group_322" dataName="Group 322" style={{"isolation": "isolate"}}>
                         <g id="Group_321" dataName="Group 321">
-                          <g id="Group_320" dataName="Group 320" clip-path="url(#clip-path-6)">
+                          <g id="Group_320" dataName="Group 320" clipPath="url(#clip-path-6)">
                             <text id="U-2" dataName="U" transform="translate(279.013 127.499) rotate(-34.088)" fill="currentColor" className="text--color" font-size="28" font-family="BebasNeue-Regular, Bebas Neue"><tspan x="0" y="0">U</tspan></text>
                           </g>
                         </g>
                       </g>
                       <g id="Group_325" dataName="Group 325" style={{"isolation": "isolate"}}>
                         <g id="Group_324" dataName="Group 324">
-                          <g id="Group_323" dataName="Group 323" clip-path="url(#clip-path-7)">
+                          <g id="Group_323" dataName="Group 323" clipPath="url(#clip-path-7)">
                             <text id="I_G" dataName="I &amp; G" transform="translate(289.703 120.265) rotate(-34.088)" fill="currentColor" className="text--color" font-size="28" font-family="BebasNeue-Regular, Bebas Neue"><tspan x="0" y="0" letterSpacing="0.06em">I &amp; </tspan><tspan y="0">G</tspan></text>
                           </g>
                         </g>
                       </g>
                       <g id="Group_328" dataName="Group 328" style={{"isolation": "isolate"}}>
                         <g id="Group_327" dataName="Group 327">
-                          <g id="Group_326" dataName="Group 326" clip-path="url(#clip-path-8)">
+                          <g id="Group_326" dataName="Group 326" clipPath="url(#clip-path-8)">
                             <text id="R" transform="translate(327.268 94.843) rotate(-34.088)" fill="currentColor" className="text--color" font-size="28" font-family="BebasNeue-Regular, Bebas Neue"><tspan x="0" y="0">R</tspan></text>
                           </g>
                         </g>
                       </g>
                       <g id="Group_331" dataName="Group 331" style={{"isolation": "isolate"}}>
                         <g id="Group_330" dataName="Group 330">
-                          <g id="Group_329" dataName="Group 329" clip-path="url(#clip-path-9)">
+                          <g id="Group_329" dataName="Group 329" clipPath="url(#clip-path-9)">
                             <text id="AP" transform="translate(337.982 87.592) rotate(-34.088)" fill="currentColor" className="text--color" font-size="28" font-family="BebasNeue-Regular, Bebas Neue"><tspan x="0" y="0" letterSpacing="0.06em">A</tspan><tspan y="0">P</tspan></text>
                           </g>
                         </g>
                       </g>
                       <g id="Group_334" dataName="Group 334" style={{"isolation": "isolate"}}>
                         <g id="Group_333" dataName="Group 333">
-                          <g id="Group_332" dataName="Group 332" clip-path="url(#clip-path-10)">
+                          <g id="Group_332" dataName="Group 332" clipPath="url(#clip-path-10)">
                             <text id="H" transform="translate(359.013 73.36) rotate(-34.088)" fill="currentColor" className="text--color" font-size="28" font-family="BebasNeue-Regular, Bebas Neue"><tspan x="0" y="0">H</tspan></text>
                           </g>
                         </g>
                       </g>
                       <g id="Group_337" dataName="Group 337" style={{"isolation": "isolate"}}>
                         <g id="Group_336" dataName="Group 336">
-                          <g id="Group_335" dataName="Group 335" clip-path="url(#clip-path-11)">
+                          <g id="Group_335" dataName="Group 335" clipPath="url(#clip-path-11)">
                             <text id="I" transform="translate(370.121 65.842) rotate(-34.088)" fill="currentColor" className="text--color" font-size="28" font-family="BebasNeue-Regular, Bebas Neue"><tspan x="0" y="0">I</tspan></text>
                           </g>
                         </g>
                       </g>
                       <g id="Group_340" dataName="Group 340" style={{"isolation": "isolate"}}>
                         <g id="Group_339" dataName="Group 339">
-                          <g id="Group_338" dataName="Group 338" clip-path="url(#clip-path-12)">
+                          <g id="Group_338" dataName="Group 338" clipPath="url(#clip-path-12)">
                             <text id="C" transform="translate(375.964 61.888) rotate(-34.088)" fill="currentColor" className="text--color" font-size="28" font-family="BebasNeue-Regular, Bebas Neue"><tspan x="0" y="0">C</tspan></text>
                           </g>
                         </g>
@@ -172,62 +172,62 @@ export default function DesignerDeveloperIllustration() {
           <g id="Group_384" dataName="Group 384">
             <path id="Path_236" dataName="Path 236" d="M645.245,266.4,446.516,410.838a5.113,5.113,0,0,1-7.143-1.125l-19.327-26.587a5.113,5.113,0,0,1,1.129-7.142h0L619.905,231.543a5.113,5.113,0,0,1,7.143,1.125l19.327,26.587a5.113,5.113,0,0,1-1.125,7.143" transform="translate(578.479 466.058)" fill="#e5a624" />
             <g id="Group_376" dataName="Group 376" transform="translate(1026.649 727.408)">
-              <g id="Group_375" dataName="Group 375" transform="translate(0 0)" clip-path="url(#clip-path-13)">
+              <g id="Group_375" dataName="Group 375" transform="translate(0 0)" clipPath="url(#clip-path-13)">
                 <g id="Group_374" dataName="Group 374" transform="translate(-0.006 1.005)" style={{"isolation": "isolate"}}>
                   <g id="Group_373" dataName="Group 373">
-                    <g id="Group_372" dataName="Group 372" clip-path="url(#clip-path-14)">
+                    <g id="Group_372" dataName="Group 372" clipPath="url(#clip-path-14)">
                       <g id="Group_350" dataName="Group 350" transform="translate(0 64.126)" style={{"isolation": "isolate"}}>
                         <g id="Group_349" dataName="Group 349">
-                          <g id="Group_348" dataName="Group 348" clip-path="url(#clip-path-15)">
+                          <g id="Group_348" dataName="Group 348" clipPath="url(#clip-path-15)">
                             <text id="WEB_" dataName="WEB / " transform="translate(13.951 59.484) rotate(-36.011)" fill="currentColor" className="text--color" font-size="28" font-family="BebasNeue-Regular, Bebas Neue"><tspan x="0" y="0" letterSpacing="0.06em">WEB /</tspan><tspan y="0"> </tspan></text>
                           </g>
                         </g>
                       </g>
                       <g id="Group_353" dataName="Group 353" transform="translate(55.429 57.342)" style={{"isolation": "isolate"}}>
                         <g id="Group_352" dataName="Group 352">
-                          <g id="Group_351" dataName="Group 351" clip-path="url(#clip-path-16)">
+                          <g id="Group_351" dataName="Group 351" clipPath="url(#clip-path-16)">
                             <text id="F" transform="translate(13.951 25.981) rotate(-36.011)" fill="currentColor" className="text--color" font-size="28" font-family="BebasNeue-Regular, Bebas Neue"><tspan x="0" y="0">F</tspan></text>
                           </g>
                         </g>
                       </g>
                       <g id="Group_356" dataName="Group 356" transform="translate(64.764 49.546)" style={{"isolation": "isolate"}}>
                         <g id="Group_355" dataName="Group 355">
-                          <g id="Group_354" dataName="Group 354" clip-path="url(#clip-path-17)">
+                          <g id="Group_354" dataName="Group 354" clipPath="url(#clip-path-17)">
                             <text id="R-2" dataName="R" transform="translate(13.95 26.993) rotate(-36.011)" fill="currentColor" className="text--color" font-size="28" font-family="BebasNeue-Regular, Bebas Neue"><tspan x="0" y="0">R</tspan></text>
                           </g>
                         </g>
                       </g>
                       <g id="Group_359" dataName="Group 359" transform="translate(75.488 41.819)" style={{"isolation": "isolate"}}>
                         <g id="Group_358" dataName="Group 358">
-                          <g id="Group_357" dataName="Group 357" clip-path="url(#clip-path-18)">
+                          <g id="Group_357" dataName="Group 357" clipPath="url(#clip-path-18)">
                             <text id="O" transform="translate(13.951 26.924) rotate(-36.011)" fill="currentColor" className="text--color" font-size="28" font-family="BebasNeue-Regular, Bebas Neue"><tspan x="0" y="0">O</tspan></text>
                           </g>
                         </g>
                       </g>
                       <g id="Group_362" dataName="Group 362" transform="translate(86.12 33.62)" style={{"isolation": "isolate"}}>
                         <g id="Group_361" dataName="Group 361">
-                          <g id="Group_360" dataName="Group 360" clip-path="url(#clip-path-19)">
+                          <g id="Group_360" dataName="Group 360" clipPath="url(#clip-path-19)">
                             <text id="N" transform="translate(13.951 27.396) rotate(-36.011)" fill="currentColor" className="text--color" font-size="28" font-family="BebasNeue-Regular, Bebas Neue"><tspan x="0" y="0">N</tspan></text>
                           </g>
                         </g>
                       </g>
                       <g id="Group_365" dataName="Group 365" transform="translate(97.401 27.695)" style={{"isolation": "isolate"}}>
                         <g id="Group_364" dataName="Group 364">
-                          <g id="Group_363" dataName="Group 363" clip-path="url(#clip-path-20)">
+                          <g id="Group_363" dataName="Group 363" clipPath="url(#clip-path-20)">
                             <text id="T" transform="translate(13.951 25.123) rotate(-36.011)" fill="currentColor" className="text--color" font-size="28" font-family="BebasNeue-Regular, Bebas Neue"><tspan x="0" y="0">T</tspan></text>
                           </g>
                         </g>
                       </g>
                       <g id="Group_368" dataName="Group 368" transform="translate(105.531 6.836)" style={{"isolation": "isolate"}}>
                         <g id="Group_367" dataName="Group 367">
-                          <g id="Group_366" dataName="Group 366" clip-path="url(#clip-path-21)">
+                          <g id="Group_366" dataName="Group 366" clipPath="url(#clip-path-21)">
                             <text id="_-EN" dataName="-EN" transform="translate(13.95 40.072) rotate(-36.011)" fill="currentColor" className="text--color" font-size="28" font-family="BebasNeue-Regular, Bebas Neue"><tspan x="0" y="0" letterSpacing="0.06em">-E</tspan><tspan y="0">N</tspan></text>
                           </g>
                         </g>
                       </g>
                       <g id="Group_371" dataName="Group 371" transform="translate(134.254)" style={{"isolation": "isolate"}}>
                         <g id="Group_370" dataName="Group 370">
-                          <g id="Group_369" dataName="Group 369" clip-path="url(#clip-path-22)">
+                          <g id="Group_369" dataName="Group 369" clipPath="url(#clip-path-22)">
                             <text id="D" transform="translate(13.95 26.032) rotate(-36.011)" fill="currentColor" className="text--color" font-size="28" font-family="BebasNeue-Regular, Bebas Neue"><tspan x="0" y="0">D</tspan></text>
                           </g>
                         </g>
