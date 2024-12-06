@@ -5,6 +5,7 @@ import GridColumns from './GridColumns';
 import Navigation from './Navigation';
 import { useEffect, useState } from 'react';
 import ArrowRight from './elements/ArrowRight';
+import { myInfo } from '../common/CommonContent';
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -24,17 +25,17 @@ export default function Header() {
           <span className="header__logo__svg">
             <SR_logo />
           </span>
-          <span className='header__logo__text'>Salman Raza</span>
+          <span className='header__logo__text'>{myInfo.name}</span>
         </Link>      
       </div>
       <div className="header__block">
         <nav className="header__nav">
           <div className='display--flex align_items--center gap--3'>
             <Navigation />
-            <Link href={'./'} className="contact-button">
+            <a href={'mailto:salraza1993@gmail.com'} className="contact-button">
               <span className='text'>Contact Me</span>
               <span className="icon"><ArrowRight /></span>
-            </Link>
+            </a>
           </div>
         </nav>
       </div>

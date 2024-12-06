@@ -1,6 +1,7 @@
 import Link from "next/link";
 import GridColumns from "./GridColumns";
 import BuiltWith from "./BuiltWith";
+import { myInfo } from "../common/CommonContent";
 
 export default function Footer() {
   const socialLinks = [
@@ -11,7 +12,6 @@ export default function Footer() {
   ];
   return<>
     <footer className="footer">
-      {/* <Link href={"https://wa.me/+971551532975"} target="_blank" className="cta-call-button"><i className="fa-brands fa-whatsapp"></i></Link> */}
       <div className="wrapper">
         <div className="footer__content">
           <div className="footer__content__block">
@@ -32,11 +32,11 @@ export default function Footer() {
             </div>
             <div className="footer-cta-buttons">
               <span className="__or">or</span>
-              <Link href={'mailto:salraza1993@gmail.com'} className="footer-cta-buttons__button __email">
+              <Link href={`mailto:${myInfo.email}`} className="footer-cta-buttons__button __email">
                 <i className="fa-regular fa-envelope"></i>
                 salraza1993@gmail.com
               </Link>
-              <Link href={"https://wa.me/+971551532975"} target="__blank" className="footer-cta-buttons__button __whatsapp">
+              <Link href={`https://wa.me/${myInfo.number}`} target="__blank" className="footer-cta-buttons__button __whatsapp">
                 Get quick response through
                 <i className="fa-brands fa-whatsapp"></i>
               </Link>

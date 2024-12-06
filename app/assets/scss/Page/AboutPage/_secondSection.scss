@@ -1,11 +1,3 @@
-@import './../../utils/utils.scss';
-
-:root {
-  --block-padding: calc(1rem + 1.5vw);
-  --man-on-couch-size: calc(var(--wrapper-column-width) * 1.15);
-  --paragraph-font-size: calc(var(--font-size-h5) / 1.15);
-  --paragraph-line-height: calc(var(--paragraph-font-size) * 1.5);
-}
 .second-section {
   width: 100%;
   .content {

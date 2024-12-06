@@ -1,0 +1,30 @@
+
+.extra-info-section {
+  padding-block: calc(var(--block-padding) * 3);
+  .sub-content-wrapper {
+    position: relative;
+    padding-inline-start: calc(var(--wrapper-column-width) * 1);
+    display: flex;
+    align-items: center;
+
+    .sub-content {
+      position: relative;
+      padding-inline-end: calc(var(--wrapper-column-width) * 1);
+
+      p {
+        font-size: var(--paragraph-font-size);
+        line-height: var(--paragraph-line-height);
+        font-weight: 300;
+      }
+    }
+
+    .sub-content__icon {
+      position: absolute;
+      width: calc(var(--wrapper-column-width) * 1);
+      aspect-ratio: 2 / 1.5;
+      flex-shrink: 0;
+      inset-inline-end: 0;
+      @include objectFit($fit: contain);
+    }
+  }
+}

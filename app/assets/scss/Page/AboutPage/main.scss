@@ -1,4 +1,13 @@
+@import './../../utils/utils.scss';
 @import './firstSection';
 @import './secondSection';
 @import './skillsSection';
 @import './bornBroughtUp';
+@import './extraSection';
+
+:root {
+  --block-padding: calc(1rem + 1.5vw);
+  --man-on-couch-size: calc(var(--wrapper-column-width) * 1.15);
+  --paragraph-font-size: calc(var(--font-size-h5) / 1.15);
+  --paragraph-line-height: calc(var(--paragraph-font-size) * 1.5);
+}

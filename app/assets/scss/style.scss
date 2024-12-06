@@ -45,6 +45,7 @@ body {
     inset: 0;
     opacity: 0.12;
     background: transparent url('/images/noise.gif') repeat;
+    background-attachment: fixed;
     z-index: -1;
   }
 }
@@ -555,6 +556,7 @@ section { position: relative; z-index: 0; }
           overflow: clip;
           padding: calc(var(--tooltip-padding-x) * 4);
           color: var(--white);
+          isolation: isolate;
           .__link {
             position: relative;
             width: 40px;
@@ -575,12 +577,8 @@ section { position: relative; z-index: 0; }
           .__banner {
             position: absolute;
             inset: 0;
-            &::after {
-              content: '';
-              position: absolute;
-              inset: 0;
-              background-image: linear-gradient(to left, transparent, rgba(0,0,0,0.5));
-            }
+            z-index: -1;
+            @include objectFit();
           }
           .__logo {
             position: relative;
@@ -596,6 +594,7 @@ section { position: relative; z-index: 0; }
     }
   }
   &:hover, &:focus-within, &:focus {
+    z-index: 2;
     .tooltip-text {
       cursor: pointer;
       color: var(--accent);

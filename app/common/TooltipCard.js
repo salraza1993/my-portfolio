@@ -1,13 +1,15 @@
 import Image from "next/image";
 
-export default function CurrentCompanyDetailsCard({data}) {
+export default function TooltipCard({ data }) {
   return (
     <span className='tooltip-data company-details'>
       <span className="company-details-card">
         <span className="company-details-card__header">
-          <span className="__logo">
-            <Image src={data.logo || ""} alt={data.name || ""} width={100} height={50} />
-          </span>
+          {
+            data.logo ? <span className="__logo">
+              <Image src={data.logo || ""} alt={data.name || ""} width={100} height={50} />
+            </span> : <span className="__text font-size--h5 gilroy--bold">{data.text}</span>
+          }
           <span className="__banner">
             <Image src={data.headerBanner || ""} alt={data.name || ""} fill priority />
           </span>
@@ -20,5 +22,5 @@ export default function CurrentCompanyDetailsCard({data}) {
         </span>
       </span>
     </span>
-  )
+  );
 }
