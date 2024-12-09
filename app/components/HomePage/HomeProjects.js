@@ -4,7 +4,7 @@ import ProjectSlider from "../ProjectSlider";
 import GridColumns from "../GridColumns";
 import Image from "next/image";
 
-export default function HomeProjects() {
+export default function HomeProjects({ heading = true}) {
   const galleryTabs = [
     { label: 'Websites', iconName: 'icon-website', path: '/' },
     { label: 'Applications', iconName: 'icon-application', path: '/' },
@@ -13,14 +13,15 @@ export default function HomeProjects() {
   return <section className="home-projects-sec">
     <div className="wrapper">
       <div className="home-projects-sec__container">
-        <SectionHeading
+        {heading && <SectionHeading
           smallHeading={'work'}
           buttonPath="#"
           bigOutlineHeading={'Case Studies &'}
           bigHeading={'Projects'}
           iconImage={'/images/hand_puzzel.png'}
           iconImageAlt={'Puzzle Hand'}
-        />        
+        />
+        }    
         <div className="category-tabs-container">
           <div className="category-tabs-container__illustration">
             <Image src="/images/man-on-bean-bag.png" alt="Man on Bean Bag" fill priority />

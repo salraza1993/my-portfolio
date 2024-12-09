@@ -12,7 +12,7 @@
   gap: $gap;
 }
 
-@mixin scrollBar($width: var(--scroll-bar-width), $track: transparent, $thumb: var(--accent), $pointerEvent: initial) {
+@mixin scrollBar($width: var(--scrollbar-width), $track: transparent, $thumb: var(--accent), $pointerEvent: initial) {
   &::-webkit-scrollbar-track {
     background: $track;
     pointer-events: $pointerEvent;
@@ -72,7 +72,22 @@
     border-radius: $borderRadius;
   }
 }
+@mixin NextImgReset($position: inherit,
+  $left: initial,
+  $top: initial,
+  $right: initial,
+  $bottom: initial,
+) {
 
+  svg,
+  img {
+    position: $position !important;
+    left: $left !important;
+    top: $top !important;
+    right: $right !important;
+    bottom: $bottom !important;
+  }
+}
 @mixin border($direction: border, $width: 1, $style: solid, $rgb_color: --text-color-rgb, $color_opacity: 0.25){
   #{$direction}: #{$width}px $style rgba(var(#{$rgb_color}), $color_opacity);
 }

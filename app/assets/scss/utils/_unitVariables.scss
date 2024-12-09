@@ -4,11 +4,11 @@
   --swiper-pagination-bullet-inactive-color: var(--body-color) !important;
   --initial-font-size: 1rem;
   --initial-line-height: 1.75rem;
-  --scroll-bar-width: 5px;
+  --scrollbar-width: 5px;
   --cta-button-height: 50px;
   --wrapper-width: 1300px;
   --wrapper-column-width: calc(var(--wrapper-width) / 4);
-  --max-width-vw: calc(92vw - var(--scroll-bar-width));
+  --max-width-vw: calc(92vw - var(--scrollbar-width));
   --remain-vw-width: calc(100% - calc(var(--wrapper-width)));
   --transparent: transparent;
   --max-z-index: 10;

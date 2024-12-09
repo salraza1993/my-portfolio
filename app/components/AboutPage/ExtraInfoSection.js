@@ -17,7 +17,7 @@ export default function ExtraInfoSection() {
             </p>
           </div>
           <div className="sub-content__icon">
-            <Image src={'/images/clapping-icon.png'} alt={"Clapping Hand"} fill priority />
+            <Image src={'/images/aside-icon-1.png'} alt={"Clapping Hand"} fill priority />
           </div>
         </div>
       </div>
