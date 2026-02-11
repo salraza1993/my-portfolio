@@ -1,5 +1,5 @@
 import localFont from 'next/font/local';
-import { Inter, Ubuntu, Courier_Prime, Inter } from 'next/font/google';
+import { Inter, Ubuntu, Courier_Prime } from 'next/font/google';
 import { Bebas_Neue } from 'next/font/google';
 
 // =========== [ Gilroy ] =========== //

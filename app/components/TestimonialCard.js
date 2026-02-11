@@ -1,6 +1,6 @@
 import Image from 'next/image';
-import quoteIcon from '/public/images/quote_icon.png'
-import profilePlaceHolder from '/public/images/male-placeholder-image.jpeg'
+import quoteIcon from '../../public/images/quote_icon.png'
+import profilePlaceHolder from '../../public/images/male-placeholder-image.jpeg'
 
 export default function TestimonialCard({ data }) {
   return <div className="testimonial-cards__card">

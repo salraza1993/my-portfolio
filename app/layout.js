@@ -13,7 +13,7 @@ import {
   gilroyBold,
 } from "./../public/Fonts";
 
-import '/node_modules/@fortawesome/fontawesome-free/css/all.css';
+import '@fortawesome/fontawesome-free/css/all.css';
 import './assets/scss/style.scss'
 import Header from "./components/Header";
 import Footer from "./components/Footer";
