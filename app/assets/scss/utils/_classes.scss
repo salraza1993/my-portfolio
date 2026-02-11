@@ -1,234 +1,446 @@
-.font-size--xxl, .fs--xxl,
-.font-size--xl, .fs--xl, 
-.font-size--xl, .fs--lg,
-.font-size--h1, .fs--h1, 
-.font-size--h2, .fs--h2, .font-size--medium, .fs--medium, 
-.font-size--h3, .fs--h3, 
-.font-size--h4, .fs--h4, 
-.font-size--h5, .fs--h5, 
-.font-size--h6, .fs--h6, .font-size--small, .fs--small,
-h1, h2, h3, h4, h5, h6 {
-  --font-size: clamp(var(--font-min), var(--font-scaling), var(--font-max)) !important;
-  --line-height: calc(var(--font-size) * 1.15);
-  font-size: var(--font-size);
-  line-height: var(--line-height);
-  font-weight: normal;
+.font-size--xxl,
+.fs--xxl,
+.font-size--xl,
+.fs--xl,
+.font-size--xl,
+.fs--lg,
+.font-size--h1,
+.fs--h1,
+.font-size--h2,
+.fs--h2,
+.font-size--medium,
+.fs--medium,
+.font-size--h3,
+.fs--h3,
+.font-size--h4,
+.fs--h4,
+.font-size--h5,
+.fs--h5,
+.font-size--h6,
+.fs--h6,
+.font-size--small,
+.fs--small,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	--font-size: clamp(
+		var(--font-min),
+		var(--font-scaling),
+		var(--font-max)
+	) !important;
+	--line-height: calc(var(--font-size) * 1.15);
+	font-size: var(--font-size);
+	line-height: var(--line-height);
+	font-weight: normal;
 }
-h1, h2, h3, h4, h5, h6 {
-  margin-block-end: 1rem;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin-block-end: 1rem;
 }
-.font-size--xxl, .fs--xxl {
-  --font-scaling: 5.75vw;
-  --font-min: calc(var(--font-size-xxl) / 3);
-  --font-max: var(--font-size-xxl);
-  @media (max-width: 640px) { --font-scaling: 5.75vh; }
-}
-
-.font-size--xl, .fs--xl {
-  --font-scaling: 5.35vw;
-  --font-min: calc(var(--font-size-xl) / 3);
-  --font-max: var(--font-size-xl);
-  @media (max-width: 640px) { --font-scaling: 5.25vh; }
-}
-.font-size--lg, .fs--lg {
-  --font-scaling: 5vw;
-  --font-min: calc(var(--font-size-lg) / 3);
-  --font-max: var(--font-size-lg);
-  @media (max-width: 640px) { --font-scaling: 4.75vh; }
-}
-
-.font-size--h1, .fs--h1, h1 {
-  --font-scaling: 4.5vw;
-  --font-min: calc(var(--font-size-h1) / 2.5);
-  --font-max: var(--font-size-h1);
-  @media (max-width: 640px) { --font-scaling: 4.35vh; }
-}
-
-.font-size--h2, .fs--h2, .font-size--medium, .fs--medium, h2 {
-  --font-scaling: 4vw;
-  --font-min: calc(var(--font-size-h2) / 2.25);
-  --font-max: var(--font-size-h2);
-  @media (max-width: 640px) { --font-scaling: 4.15vh; }
-}
-
-.font-size--h3, .fs--h3, h3 {
-  --font-scaling: 3.5vw;
-  --font-min: calc(var(--font-size-h3) / 2);
-  --font-max: var(--font-size-h3);
-  @media (max-width: 640px) { --font-scaling: 4vh; }
+.font-size--xxl,
+.fs--xxl {
+	--font-scaling: 5.75vw;
+	--font-min: calc(var(--font-size-xxl) / 3);
+	--font-max: var(--font-size-xxl);
+	@media (max-width: 640px) {
+		--font-scaling: 5.75vh;
+	}
 }
 
-.font-size--h4, .fs--h4, h4 {
-  --font-scaling: 3vw;
-  --font-min: calc(var(--font-size-h4) / 1.75);
-  --font-max: var(--font-size-h4);
-  @media (max-width: 640px) { --font-scaling: 3.75vh; }
+.font-size--xl,
+.fs--xl {
+	--font-scaling: 5.35vw;
+	--font-min: calc(var(--font-size-xl) / 3);
+	--font-max: var(--font-size-xl);
+	@media (max-width: 640px) {
+		--font-scaling: 5.25vh;
+	}
 }
-.font-size--h5, .fs--h5, h5 {
-  --font-scaling: 3.65vw;
-  --font-min: calc(var(--font-size-h5) / 1.5);
-  --font-max: var(--font-size-h5);
-  @media (width <= 640px) { --font-scaling: 3.5vh; }
+.font-size--lg,
+.fs--lg {
+	--font-scaling: 5vw;
+	--font-min: calc(var(--font-size-lg) / 3);
+	--font-max: var(--font-size-lg);
+	@media (max-width: 640px) {
+		--font-scaling: 4.75vh;
+	}
+}
+
+.font-size--h1,
+.fs--h1,
+h1 {
+	--font-scaling: 4.5vw;
+	--font-min: calc(var(--font-size-h1) / 2.5);
+	--font-max: var(--font-size-h1);
+	@media (max-width: 640px) {
+		--font-scaling: 4.35vh;
+	}
+}
+
+.font-size--h2,
+.fs--h2,
+.font-size--medium,
+.fs--medium,
+h2 {
+	--font-scaling: 4vw;
+	--font-min: calc(var(--font-size-h2) / 2.25);
+	--font-max: var(--font-size-h2);
+	@media (max-width: 640px) {
+		--font-scaling: 4.15vh;
+	}
+}
+
+.font-size--h3,
+.fs--h3,
+h3 {
+	--font-scaling: 3.5vw;
+	--font-min: calc(var(--font-size-h3) / 2);
+	--font-max: var(--font-size-h3);
+	@media (max-width: 640px) {
+		--font-scaling: 4vh;
+	}
+}
+
+.font-size--h4,
+.fs--h4,
+h4 {
+	--font-scaling: 3vw;
+	--font-min: calc(var(--font-size-h4) / 1.75);
+	--font-max: var(--font-size-h4);
+	@media (max-width: 640px) {
+		--font-scaling: 3.75vh;
+	}
+}
+.font-size--h5,
+.fs--h5,
+h5 {
+	--font-scaling: 3.65vw;
+	--font-min: calc(var(--font-size-h5) / 1.5);
+	--font-max: var(--font-size-h5);
+	@media (width <= 640px) {
+		--font-scaling: 3.5vh;
+	}
 }
 
 .font-size--h6,
 .fs--h6,
 .font-size--small,
-.fs--small, h6 {
-  --font-scaling: 3.65vw;
-  --font-min: calc(var(--font-size-h6) / 1.25);
-  --font-max: var(--font-size-h6);
-  @media (max-width: 640px) { --font-scaling: 3.25vw; }
+.fs--small,
+h6 {
+	--font-scaling: 3.65vw;
+	--font-min: calc(var(--font-size-h6) / 1.25);
+	--font-max: var(--font-size-h6);
+	@media (max-width: 640px) {
+		--font-scaling: 3.25vw;
+	}
 }
 
 .position {
-  $positions: relative, absolute, sticky, static, fixed, initial, inherit;
-  @each $position in $positions {
-    &--#{$position} {
-      position: $position !important;
-    }
-  }
+	$positions: relative, absolute, sticky, static, fixed, initial, inherit;
+	@each $position in $positions {
+		&--#{$position} {
+			position: $position !important;
+		}
+	}
 }
 .z-index {
-  $zIndex: 20;
-  @for $i from 1 through $zIndex {
-    &--#{$i} {
-      z-index: $i !important;
-    }
-  }
+	$zIndex: 20;
+	@for $i from 1 through $zIndex {
+		&--#{$i} {
+			z-index: $i !important;
+		}
+	}
 }
-
 
 // ============ [ Gilroy fonts ] ============ //
-$gilroyFonts: ('thin', 'light', 'ultraLight', 'regular', 'medium', 'semiBold', 'bold');
+$gilroyFonts: (
+	"thin",
+	"light",
+	"ultraLight",
+	"regular",
+	"medium",
+	"semiBold",
+	"bold"
+);
 @each $gilroy in $gilroyFonts {
-  .gilroy { font-family: var(--gilroy--regular) !important; }
-  .gilroy--#{$gilroy} {
-    font-family: var(--gilroy--#{$gilroy}) !important;
-    strong { font-family: var(--gilroy--bold) !important; }
-  }
+	.gilroy {
+		font-family: var(--gilroy--regular) !important;
+	}
+	.gilroy--#{$gilroy} {
+		font-family: var(--gilroy--#{$gilroy}) !important;
+		strong {
+			font-family: var(--gilroy--bold) !important;
+		}
+	}
 }
 
-$ubuntuFonts: ('thin', 'light', 'regular', 'medium', 'semiBold', 'bold', 'black');
+$ubuntuFonts: (
+	"thin",
+	"light",
+	"regular",
+	"medium",
+	"semiBold",
+	"bold",
+	"black"
+);
 $ubuntuWeight: (100, 300, 400, 500, 600, 700, 900);
 .ubuntu {
-  @for $i from 1 through length($ubuntuFonts) {
-    &--#{nth($ubuntuFonts, $i)} {
-      font-family: var(--ubuntu) !important;
-      font-weight: nth($ubuntuWeight, $i) !important;
-    }
-  }
+	@for $i from 1 through length($ubuntuFonts) {
+		&--#{nth($ubuntuFonts, $i)} {
+			font-family: var(--ubuntu) !important;
+			font-weight: nth($ubuntuWeight, $i) !important;
+		}
+	}
 }
-$interFonts: ('thin', 'light', 'regular', 'medium', 'semiBold', 'bold', 'black');
+$interFonts: (
+	"thin",
+	"light",
+	"regular",
+	"medium",
+	"semiBold",
+	"bold",
+	"black"
+);
 $interWeight: (100, 200, 300, 400, 500, 600, 700, 900);
 .inter {
-  @for $i from 1 through length($interFonts) {
-    &--#{nth($interFonts, $i)} {
-      font-family: var(--inter) !important;
-      font-weight: nth($interWeight, $i) !important;
-    }
-  }
+	@for $i from 1 through length($interFonts) {
+		&--#{nth($interFonts, $i)} {
+			font-family: var(--inter) !important;
+			font-weight: nth($interWeight, $i) !important;
+		}
+	}
 }
-.__black { color: var(--dark) !important; }
-.__white { color: var(--light) !important; }
+.__black {
+	color: var(--dark) !important;
+}
+.__white {
+	color: var(--light) !important;
+}
 .max-width {
-  &-max-content, &--max-content { max-width: max-content !important;   }
-  $sizes: 400, 500, 600, 700, 800, 900, 100;
-  @each $size in $sizes {
-    &-max#{$size}, &--max-#{$size} { max-width: #{$size}px !important; }
-  }
+	&-max-content,
+	&--max-content {
+		max-width: max-content !important;
+	}
+	$sizes: 400, 500, 600, 700, 800, 900, 100;
+	@each $size in $sizes {
+		&-max#{$size},
+		&--max-#{$size} {
+			max-width: #{$size}px !important;
+		}
+	}
 }
 .text {
-  @mixin classes() {
-    &--primary, &-primary {
-      color: var(--accent) !important;
-    }
-    &--color, &-color {
-      color: var(--body-color) !important;
-    }
-    &-secondary--color, &-secondary-color, &-secondary, &--secondary {
-      color: var(--bg-secondary-color) !important;
-    }
-    &--light-gray {
-      color: var(--light-gray) !important;
-    }
-    &--bg-color {
-      color: var(--bg-color) !important;
-    }
-    &--404-color {
-      color: var(--404-bg-color) !important;
-    }    
-    &-gray {
-      $colors: 100, 200, 300, 400, 500, 600, 700, 800, 900;
-      @each $color in $colors {
-        &--#{$color}, &-#{$color} {
-          color: var(--gray-#{$color}) !important;
-        }
-      }
-    }
-    &-white, &--light { color: var(--light) !important; }
-    &-black, &--black { color: var(--black) !important; }
-  }
+	&--primary,
+	&-primary {
+		color: var(--accent) !important;
+	}
+	&--color,
+	&-color {
+		color: var(--body-color) !important;
+	}
+	&-secondary--color,
+	&-secondary-color,
+	&-secondary,
+	&--secondary {
+		color: var(--bg-secondary-color) !important;
+	}
+	&--light-gray {
+		color: var(--light-gray) !important;
+	}
+	&--bg-color {
+		color: var(--bg-color) !important;
+	}
+	&--404-color {
+		color: var(--404-bg-color) !important;
+	}
+	&-gray {
+		$colors: 100, 200, 300, 400, 500, 600, 700, 800, 900;
+		@each $color in $colors {
+			&--#{$color},
+			&-#{$color} {
+				color: var(--gray-#{$color}) !important;
+			}
+		}
+	}
+	&-white,
+	&--light {
+		color: var(--light) !important;
+	}
+	&-black,
+	&--black {
+		color: var(--black) !important;
+	}
 
-  @include classes();
-  &-hover {
-    &:hover{ @include classes(); }
-  } 
+	// Hover variants
+	&-hover {
+		&--primary:hover,
+		&-primary:hover {
+			color: var(--accent) !important;
+		}
+		&--color:hover,
+		&-color:hover {
+			color: var(--body-color) !important;
+		}
+		&-secondary--color:hover,
+		&-secondary-color:hover,
+		&-secondary:hover,
+		&--secondary:hover {
+			color: var(--bg-secondary-color) !important;
+		}
+		&--light-gray:hover {
+			color: var(--light-gray) !important;
+		}
+		&--bg-color:hover {
+			color: var(--bg-color) !important;
+		}
+		&--404-color:hover {
+			color: var(--404-bg-color) !important;
+		}
+		&-gray {
+			$colors: 100, 200, 300, 400, 500, 600, 700, 800, 900;
+			@each $color in $colors {
+				&--#{$color}:hover,
+				&-#{$color}:hover {
+					color: var(--gray-#{$color}) !important;
+				}
+			}
+		}
+		&-white:hover,
+		&--light:hover {
+			color: var(--light) !important;
+		}
+		&-black:hover,
+		&--black:hover {
+			color: var(--black) !important;
+		}
+	}
 }
 .bg {
-  &-primary, &--primary {
-    background-color: var(--accent) !important;
-  }
-  &-secondary, &--secondary {
-    background-color: var(--bg-secondary-color) !important;
-  }
-  &-text-color, &--text-color {
-    background-color: var(--text-color) !important;
-  }
-  &-gray, &--gray {
-    $colors: 100, 200, 300, 400, 500, 600, 700, 800, 900;
-    @each $color in $colors {
-      &--#{$color}, &-#{$color} {
-        background-color: $color !important;
-      }
-    }
-  }
-  &-transparent, &--transparent {
-    background-color: var(--transparent) !important;
-  }
-  &-origin, &--origin { background-color: var(--route-origin-color) !important; }
-  &-destination, &--destination, &-destinations, &--destinations { background-color: var(--route-destination-color) !important; }
-  &-promoted, &--promoted { background-color: var(--route-promoted-color) !important; }
-  &-orange, &--orange { background-color: var(--orange) !important; }
-  &-yellow, &--yellow { background-color: var(--yellow) !important; }
-  &-blue, &--blue { background-color: var(--blue) !important; }
-  &-indigo, &--indigo { background-color: var(--indigo) !important; }
-  &-purple, &--purple { background-color: var(--purple) !important; }
-  &-pink, &--pink { background-color: var(--pink) !important; }
-  &-green, &--green { background-color: var(--green) !important; }
-  &-teal, &--teal { background-color: var(--teal) !important; }
-  &-red, &--red { background-color: var(--teal) !important; }
+	&-primary,
+	&--primary {
+		background-color: var(--accent) !important;
+	}
+	&-secondary,
+	&--secondary {
+		background-color: var(--bg-secondary-color) !important;
+	}
+	&-text-color,
+	&--text-color {
+		background-color: var(--text-color) !important;
+	}
+	&-gray,
+	&--gray {
+		$colors: 100, 200, 300, 400, 500, 600, 700, 800, 900;
+		@each $color in $colors {
+			&--#{$color},
+			&-#{$color} {
+				background-color: $color !important;
+			}
+		}
+	}
+	&-transparent,
+	&--transparent {
+		background-color: var(--transparent) !important;
+	}
+	&-origin,
+	&--origin {
+		background-color: var(--route-origin-color) !important;
+	}
+	&-destination,
+	&--destination,
+	&-destinations,
+	&--destinations {
+		background-color: var(--route-destination-color) !important;
+	}
+	&-promoted,
+	&--promoted {
+		background-color: var(--route-promoted-color) !important;
+	}
+	&-orange,
+	&--orange {
+		background-color: var(--orange) !important;
+	}
+	&-yellow,
+	&--yellow {
+		background-color: var(--yellow) !important;
+	}
+	&-blue,
+	&--blue {
+		background-color: var(--blue) !important;
+	}
+	&-indigo,
+	&--indigo {
+		background-color: var(--indigo) !important;
+	}
+	&-purple,
+	&--purple {
+		background-color: var(--purple) !important;
+	}
+	&-pink,
+	&--pink {
+		background-color: var(--pink) !important;
+	}
+	&-green,
+	&--green {
+		background-color: var(--green) !important;
+	}
+	&-teal,
+	&--teal {
+		background-color: var(--teal) !important;
+	}
+	&-red,
+	&--red {
+		background-color: var(--teal) !important;
+	}
 }
-.current--color { color: var(--current-color); }
-.border-color { border-color: var(--border-color) !important; }
+.current--color {
+	color: var(--current-color);
+}
+.border-color {
+	border-color: var(--border-color) !important;
+}
 
 .cursor {
-  &-pointer, &--pointer { cursor: pointer !important; }
-  &-auto, &--auto { cursor: auto !important; }
-  &-default, &--default { cursor: default !important; }
+	&-pointer,
+	&--pointer {
+		cursor: pointer !important;
+	}
+	&-auto,
+	&--auto {
+		cursor: auto !important;
+	}
+	&-default,
+	&--default {
+		cursor: default !important;
+	}
 }
 
 .line-height {
-  &--none { line-height: none !important;}
-  &--normal { line-height: normal !important;}
+	&--none {
+		line-height: none !important;
+	}
+	&--normal {
+		line-height: normal !important;
+	}
 }
 .flex {
-  &--wrap { flex-wrap: wrap !important; }
-  &--nowrap { flex-wrap: nowrap !important; }
+	&--wrap {
+		flex-wrap: wrap !important;
+	}
+	&--nowrap {
+		flex-wrap: nowrap !important;
+	}
 }
 @include display(display);
 
-// flex align items 
+// flex align items
 @include flexAlignments(align-items);
 
 // flex justify content
@@ -243,98 +455,138 @@ $interWeight: (100, 200, 300, 400, 500, 600, 700, 900);
 // ------------[ gaps ]------------ //
 @include generateGap(gap);
 
-
 @media (width >= $screen-size--xl) {
-  .hidden--xxl {
-    display: none !important;
-  }
-  .show--xxl, .visible--xxl {
-    display: initial !important;
-  }
+	.hidden--xxl {
+		display: none !important;
+	}
+	.show--xxl,
+	.visible--xxl {
+		display: initial !important;
+	}
 }
 @media (width <= $screen-size--xl) {
-  .hidden--xl {
-    display: none !important;
-  }
-  .show--xl, .visible--xl {
-    display: flex !important;
-  }
+	.hidden--xl {
+		display: none !important;
+	}
+	.show--xl,
+	.visible--xl {
+		display: flex !important;
+	}
 }
-@media (width <=  $screen-size--lg) {
-  .hidden--lg {
-    display: none !important;
-  }
-  .show--lg, .visible--lg {
-    display: flex !important;
-  }
+@media (width <= $screen-size--lg) {
+	.hidden--lg {
+		display: none !important;
+	}
+	.show--lg,
+	.visible--lg {
+		display: flex !important;
+	}
 }
 @media (width <= $screen-size--md) {
-  .hidden--md {
-    display: none !important;
-  }
-  .show--md, .visible--md {
-    display: flex !important;
-  }
+	.hidden--md {
+		display: none !important;
+	}
+	.show--md,
+	.visible--md {
+		display: flex !important;
+	}
 }
 @media (width <= $screen-size--sm) {
-  .hidden--sm {
-    display: none !important;
-  }
-  .show--sm, .visible--sm {
-    display: flex !important;
-  }
+	.hidden--sm {
+		display: none !important;
+	}
+	.show--sm,
+	.visible--sm {
+		display: flex !important;
+	}
 }
 @media (width <= $screen-size--xs) {
-  .hidden--xs {
-    display: none !important;
-  }
-  .show--xs, .visible--xs {
-    display: flex !important;
-  }
+	.hidden--xs {
+		display: none !important;
+	}
+	.show--xs,
+	.visible--xs {
+		display: flex !important;
+	}
 }
 
 @mixin lightStyles() {
-  .text-primary--dark-mode-transparent { color: var(--accent) !important; }
+	.text-primary--dark-mode-transparent {
+		color: var(--accent) !important;
+	}
 }
 
 @mixin darkStyles() {
-  .text {
-    &-gray {
-      $colors: 100, 200, 300, 400, 500, 600, 700, 800, 900; 
-      @each $color in $colors {
-        &--#{$color}, &-#{$color} {
-          color: var(--gray-#{$color}) !important;
-        }
-      }
-    }
-  }
-  .__black, .text-black, .text--black { color: var(--light) !important; }
-  .__white { color: var(--black) !important; }
-  .text-primary--dark-mode-transparent { color: var(--transparent) !important; }
-  .dark-mode {
-    &-transparent, &--transparent { color: var(--transparent) !important; }
-    &-white, &--light { color: var(--light) !important; }
-    &-black, &--black { color: var(--dark) !important; }
-    &-text-color, &--text-color { color: var(--text-color) !important; }
-    &-primary, &--primary { color: var(--accent) !important; }
-    &-secondary, &--secondary { color: var(--secondary) !important; }
-    &-danger, &--danger { color: var(--danger) !important; }
-    &-success, &--success { color: var(--success) !important; }
-  }
+	.text {
+		&-gray {
+			$colors: 100, 200, 300, 400, 500, 600, 700, 800, 900;
+			@each $color in $colors {
+				&--#{$color},
+				&-#{$color} {
+					color: var(--gray-#{$color}) !important;
+				}
+			}
+		}
+	}
+	.__black,
+	.text-black,
+	.text--black {
+		color: var(--light) !important;
+	}
+	.__white {
+		color: var(--black) !important;
+	}
+	.text-primary--dark-mode-transparent {
+		color: var(--transparent) !important;
+	}
+	.dark-mode {
+		&-transparent,
+		&--transparent {
+			color: var(--transparent) !important;
+		}
+		&-white,
+		&--light {
+			color: var(--light) !important;
+		}
+		&-black,
+		&--black {
+			color: var(--dark) !important;
+		}
+		&-text-color,
+		&--text-color {
+			color: var(--text-color) !important;
+		}
+		&-primary,
+		&--primary {
+			color: var(--accent) !important;
+		}
+		&-secondary,
+		&--secondary {
+			color: var(--secondary) !important;
+		}
+		&-danger,
+		&--danger {
+			color: var(--danger) !important;
+		}
+		&-success,
+		&--success {
+			color: var(--success) !important;
+		}
+	}
 }
 
 :root {
-  &:is(.light) {
-    @include lightStyles();
-  }
+	&:is(.light) {
+		@include lightStyles();
+	}
 
-  &:is(.dark) {
-    @include darkStyles();
-  }
+	&:is(.dark) {
+		@include darkStyles();
+	}
 }
 // ========= [  Detecting OS color system ] ========== //
 @media (prefers-color-scheme: dark) {
-  :root:not(.light, .dark) {
-    @include darkStyles();
-  }
+	:root:not(.light, .dark) {
+		@include darkStyles();
+	}
 }
